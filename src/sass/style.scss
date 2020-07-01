@@ -1,0 +1,10 @@
+@import "./_colors";
+@import "./_font";
+@import "./flexMixin";
+@import "./_mainPage";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+}

@@ -1,0 +1,13 @@
+.mainPage {
+  background-color: $primaryColor;
+  color: $primaryColorText;
+  width: 100%;
+  @include flexColumn;
+
+  h1 {
+    word-spacing: 100vw;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-family: $sloganFont;
+  }
+}
