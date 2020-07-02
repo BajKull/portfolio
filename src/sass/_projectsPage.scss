@@ -1,0 +1,194 @@
+.projects {
+  @include flexColumn;
+  @include animationSlideLeft(1s, 0s);
+
+  .project {
+    display: none;
+  }
+
+  .projectsTitle {
+    font-size: 4rem;
+    margin: 50px 0 75px 0;
+    text-align: center;
+  }
+
+  .projectsArrows {
+    position: relative;
+    width: 20%;
+    height: 52px;
+    margin: 50px 40% 50px 40%;
+
+    @include breakpoint(1300px) {
+      width: 40%;
+    }
+
+    @include breakpoint(600px) {
+      width: 70%;
+    }
+  }
+
+  .projectArrow {
+    border: 0;
+    background-color: $primaryColor;
+    padding: 10px 35px;
+    border-radius: 5px;
+
+    img {
+      width: 32px;
+    }
+
+    &:hover {
+      background-color: darken($primaryColor, 10);
+    }
+  }
+
+  .arrowLeft {
+    position: absolute;
+    left: 0;
+  }
+
+  .arrowRight {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.project {
+  display: flex;
+
+  @include breakpoint(1350px) {
+    @include flexColumn;
+  }
+
+  .projectImages {
+    position: relative;
+    width: 60%;
+    margin-left: 5%;
+    @include breakpoint(1350px) {
+      width: 90%;
+      margin: 0;
+    }
+  }
+
+  .projectImage {
+    width: 100%;
+    display: none;
+  }
+
+  .imageActive {
+    display: block;
+  }
+
+  .projectImagesDots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: -35px;
+    z-index: 1;
+  }
+
+  .projectImagesDot {
+    display: block;
+    height: 20px;
+    width: 20px;
+    margin: 3px;
+    border-radius: 50%;
+    border: 2px solid $primaryColor;
+    cursor: pointer;
+  }
+
+  .dotActive {
+    background-color: $primaryColor;
+  }
+
+  .projectInfo {
+    position: relative;
+    width: 30%;
+    background-color: rgb(240, 240, 240);
+    @include breakpoint(1350px) {
+      width: 90%;
+      margin: 0;
+    }
+    @include breakpoint(600px) {
+      @include flexColumn;
+    }
+  }
+
+  .projectTitle {
+    text-align: center;
+    font-size: 3rem;
+    margin: 15px;
+    @include breakpoint(1350px) {
+      margin-top: 45px;
+    }
+  }
+
+  .projectDescription {
+    padding: 25px;
+    @include breakpoint(1350px) {
+      margin-bottom: 75px;
+    }
+    @include breakpoint(600px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .projectBtnHref {
+    border: 3px solid $primaryColor;
+    color: $primaryColor;
+    font-size: 24px;
+    padding: 10px 75px;
+    font-weight: 600;
+
+    @include breakpoint(1800px) {
+      padding: 10px 35px;
+    }
+    @include breakpoint(1350px) {
+      padding: 10px 75px;
+    }
+    @include breakpoint(900px) {
+      padding: 10px 35px;
+    }
+    @include breakpoint(600px) {
+      padding: 10px 15px;
+      margin: 0 15px 15px 15px;
+    }
+  }
+
+  .projectHref1 {
+    position: absolute;
+    bottom: 15px;
+    left: 25px;
+    @include breakpoint(1350px) {
+      left: 25%;
+    }
+    @include breakpoint(1200px) {
+      left: 15%;
+    }
+    @include breakpoint(600px) {
+      position: initial;
+      display: inline-flex;
+    }
+  }
+
+  .projectHref2 {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    @include breakpoint(1350px) {
+      right: 25%;
+    }
+    @include breakpoint(1200px) {
+      right: 15%;
+    }
+    @include breakpoint(600px) {
+      position: initial;
+      display: inline-flex;
+    }
+  }
+}
+
+.projectActive {
+  display: flex !important;
+}

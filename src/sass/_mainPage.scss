@@ -13,9 +13,14 @@
     padding: 0;
     width: 100%;
     height: 100vh;
-    margin-left: -100%;
     z-index: -1;
-    @include animationSlideLeft;
+    transform: translateX(-100%);
+    @include animationSlideLeft(1s, 0.25s);
+  }
+
+  a {
+    display: flex;
+    text-decoration: none;
   }
 
   .mainBtnProjects {
@@ -29,6 +34,8 @@
     margin-top: 35px;
     font-size: 24px;
     font-weight: 500;
+    transition: 0.25s;
+    @include animationAFKAttention;
 
     &:focus {
       outline: none;
@@ -38,6 +45,8 @@
     }
 
     &:hover {
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+
       .eyeLines {
         opacity: 1;
       }
@@ -51,7 +60,7 @@
       margin: 0;
       opacity: 0;
       padding: 10px 40px;
-      @include animationFadeIn;
+      @include animationFadeIn(0.5s, 0.75s);
     }
 
     .eyeIcon {
@@ -60,7 +69,7 @@
       border-radius: 0 5px 5px 0;
       padding: 10px;
       opacity: 0;
-      @include animationFadeIn;
+      @include animationFadeIn(0.5s, 0.75s);
     }
 
     .eyeLines {
@@ -117,6 +126,6 @@
     width: 5px;
     border-radius: 2px;
     background-color: $secondaryColor;
-    @include animationSlideDown;
+    @include animationSlideDown(0.75s, 1.25s);
   }
 }
