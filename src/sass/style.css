@@ -151,18 +151,63 @@
   }
 }
 
-.slide-exit {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+.page-enter {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  position: absolute !important;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
 }
 
-.slide-exit-active {
+.page-enter-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
+}
+
+.page-exit {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  position: absolute !important;
+}
+
+.page-exit-active {
+  -webkit-transition: 1s;
+  transition: 1s;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
 }
 
-.slide-exit-done {
-  display: none;
+.fade-enter {
+  opacity: 1;
+  z-index: 1;
+}
+
+.fade-enter-active {
+  opacity: 0;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.fade-exit {
+  opacity: 0;
+}
+
+.fade-exit-active {
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  opacity: 1;
+}
+
+.app {
+  position: relative;
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .mainPage {
@@ -198,8 +243,8 @@
           transform: translateX(-100%);
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
   -webkit-animation-name: slideLeft;
           animation-name: slideLeft;
   -webkit-animation-fill-mode: forwards;
@@ -267,8 +312,8 @@
   padding: 10px 40px;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
-  -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
   -webkit-animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
@@ -285,8 +330,8 @@
   opacity: 0;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
-  -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
   -webkit-animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
@@ -304,22 +349,6 @@
   z-index: 1;
   -webkit-transition: 0.25s;
   transition: 0.25s;
-}
-
-.mainPage .mainBtnMenu {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  border: 0;
-  background: 0;
-}
-
-.mainPage .mainBtnMenu:focus {
-  outline: none;
-}
-
-.mainPage .mainBtnMenu img {
-  width: 64px;
 }
 
 .mainPage h1 {
@@ -361,6 +390,46 @@
           animation-fill-mode: forwards;
 }
 
+.navMenuBtn {
+  position: absolute;
+  opacity: 0;
+  top: 15px;
+  right: 15px;
+  border: 0;
+  background: 0;
+  z-index: 10;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+          animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.navMenuBtn:focus {
+  outline: none;
+}
+
+.navMenuBtn img {
+  width: 64px;
+}
+
+.homeBtn {
+  top: 15px;
+  right: 95px;
+}
+
+@media (max-width: 600px) {
+  .homeBtn {
+    right: none;
+    left: 15px;
+  }
+}
+
 .projects {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -375,20 +444,13 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-name: slideLeft;
-          animation-name: slideLeft;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
-          animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
 }
 
 .projects .project {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
 }
 
 .projects .projectsTitle {
@@ -445,6 +507,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 90%;
+  margin-left: 5;
 }
 
 @media (max-width: 1350px) {
@@ -468,6 +532,7 @@
 .project .projectImages {
   position: relative;
   width: 60%;
+  height: auto;
   margin-left: 5%;
 }
 
@@ -480,11 +545,6 @@
 
 .project .projectImage {
   width: 100%;
-  display: none;
-}
-
-.project .imageActive {
-  display: block;
 }
 
 .project .projectImagesDots {
@@ -658,12 +718,6 @@
     display: -ms-inline-flexbox;
     display: inline-flex;
   }
-}
-
-.projectActive {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 body {

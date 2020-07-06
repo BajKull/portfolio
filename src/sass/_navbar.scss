@@ -1,0 +1,28 @@
+.navMenuBtn {
+  position: absolute;
+  opacity: 0;
+  top: 15px;
+  right: 15px;
+  border: 0;
+  background: 0;
+  z-index: 10;
+  @include animationFadeIn(1s, 0.9s);
+
+  &:focus {
+    outline: none;
+  }
+
+  img {
+    width: 64px;
+  }
+}
+
+.homeBtn {
+  top: 15px;
+  right: 95px;
+
+  @include breakpoint(600px) {
+    right: none;
+    left: 15px;
+  }
+}

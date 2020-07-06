@@ -1,42 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import CrossfadeImage from "react-crossfade-image";
 
-export default function Project({ data }) {
-  const [activeProject, setActiveProject] = useState(0);
-
+export default function Project({ data, setCurrentImage, activeImage }) {
   useEffect(() => {
-    // get first project, make it visible
-    const activeProject = document.getElementsByClassName("project")[0];
-    activeProject.classList.add("projectActive");
-    // get first project => images container => first image => add active tag
-    activeProject.firstChild.firstChild.classList.add("imageActive");
-    // make first dot active
-    activeProject.firstChild.lastChild.childNodes[0].classList.add("dotActive");
-  });
+    document
+      .getElementsByClassName("projectImagesDot")[0]
+      .classList.add("dotActive");
+  }, []);
 
   const switchImage = (e) => {
-    const dotsContainer = document.getElementsByClassName("projectImagesDots")[
-      activeProject
-    ];
+    const dotsContainer = document.getElementsByClassName(
+      "projectImagesDots"
+    )[0];
     const childrenDots = Array.from(dotsContainer.children);
     childrenDots.forEach((dot) => dot.classList.remove("dotActive"));
 
     const index = childrenDots.indexOf(e.target);
     childrenDots[index].classList.add("dotActive");
-
-    const imagesContainer = document.getElementsByClassName("projectImages")[
-      activeProject
-    ];
-    const childrenImages = Array.from(imagesContainer.children);
-    childrenImages.forEach((img) => img.classList.remove("imageActive"));
-    childrenImages[index].classList.add("imageActive");
+    setCurrentImage(index);
   };
 
   return (
     <div className="project">
       <div className="projectImages">
-        {data.images.map((img, i) => (
-          <img className="projectImage" src={img} alt="" key={i} />
-        ))}
+        <CrossfadeImage className="projectImage" src={activeImage} alt="" />
         <div className="projectImagesDots">
           {data.images.map((img, i) => (
             <span className="projectImagesDot" key={i} onClick={switchImage} />

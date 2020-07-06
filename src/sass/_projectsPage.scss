@@ -1,9 +1,10 @@
 .projects {
   @include flexColumn;
-  @include animationSlideLeft(1s, 0s);
+  // @include animationSlideLeft(1s, 0s);
 
   .project {
-    display: none;
+    display: flex;
+    position: relative;
   }
 
   .projectsTitle {
@@ -55,6 +56,8 @@
 
 .project {
   display: flex;
+  width: 90%;
+  margin-left: 5;
 
   @include breakpoint(1350px) {
     @include flexColumn;
@@ -63,6 +66,7 @@
   .projectImages {
     position: relative;
     width: 60%;
+    height: auto;
     margin-left: 5%;
     @include breakpoint(1350px) {
       width: 90%;
@@ -72,11 +76,6 @@
 
   .projectImage {
     width: 100%;
-    display: none;
-  }
-
-  .imageActive {
-    display: block;
   }
 
   .projectImagesDots {
@@ -187,8 +186,4 @@
       display: inline-flex;
     }
   }
-}
-
-.projectActive {
-  display: flex !important;
 }

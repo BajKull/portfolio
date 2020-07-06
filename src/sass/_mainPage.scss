@@ -15,7 +15,7 @@
     height: 100vh;
     z-index: -1;
     transform: translateX(-100%);
-    @include animationSlideLeft(1s, 0.25s);
+    @include animationSlideLeft(1s, 0s);
   }
 
   a {
@@ -60,7 +60,7 @@
       margin: 0;
       opacity: 0;
       padding: 10px 40px;
-      @include animationFadeIn(0.5s, 0.75s);
+      @include animationFadeIn(0.5s, 0.5s);
     }
 
     .eyeIcon {
@@ -69,7 +69,7 @@
       border-radius: 0 5px 5px 0;
       padding: 10px;
       opacity: 0;
-      @include animationFadeIn(0.5s, 0.75s);
+      @include animationFadeIn(0.5s, 0.5s);
     }
 
     .eyeLines {
@@ -80,22 +80,6 @@
       right: 0;
       z-index: 1;
       transition: 0.25s;
-    }
-  }
-
-  .mainBtnMenu {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    border: 0;
-    background: 0;
-
-    &:focus {
-      outline: none;
-    }
-
-    img {
-      width: 64px;
     }
   }
 
