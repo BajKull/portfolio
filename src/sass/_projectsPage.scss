@@ -9,7 +9,7 @@
 
   .projectsTitle {
     font-size: 4rem;
-    margin: 50px 0 75px 0;
+    margin: 100px 0 75px 0;
     text-align: center;
   }
 
@@ -57,7 +57,6 @@
 .project {
   display: flex;
   width: 90%;
-  margin-left: 5;
 
   @include breakpoint(1350px) {
     @include flexColumn;
@@ -75,6 +74,8 @@
   }
 
   .projectImage {
+    position: absolute;
+    top: 0;
     width: 100%;
   }
 

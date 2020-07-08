@@ -1,19 +1,30 @@
-.navMenuBtn {
+.navMenu {
+  width: 100%;
   position: absolute;
-  opacity: 0;
-  top: 15px;
-  right: 15px;
+  top: 0;
+  z-index: 10;
+  @include flexDisplay;
+}
+
+.navMenuBtn {
+  margin: 5px;
+  padding: 10px 30px;
   border: 0;
   background: 0;
-  z-index: 10;
-  @include animationFadeIn(1s, 0.9s);
+  border-radius: 5px;
+  border-bottom: 2px solid transparent;
 
   &:focus {
     outline: none;
   }
 
+  &:hover {
+    background: rgb(240, 240, 240);
+    border-bottom: 2px solid $primaryColor;
+  }
+
   img {
-    width: 64px;
+    width: 32px;
   }
 }
 

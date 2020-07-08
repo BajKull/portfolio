@@ -6,9 +6,9 @@ import ArrowLeft from "../icons/arrowLeft.svg";
 import ArrowRight from "../icons/arrowRight.svg";
 
 export default function Projects() {
-  const [currentProject, setCurrectProject] = useState(0);
+  const [currentProject, setCurrectProject] = useState(data.length * 300);
   const [currentImage, setCurrentImage] = useState(0);
-  const project = data[currentProject];
+  const project = data[currentProject % data.length];
   const activeImage = project.images[currentImage];
   const resetDots = () => {
     const dots = Array.from(
@@ -31,7 +31,7 @@ export default function Projects() {
         <button
           className="projectArrow arrowLeft"
           onClick={() => {
-            setCurrectProject(Math.abs((currentProject - 1) % data.length));
+            setCurrectProject(currentProject - 1);
             setCurrentImage(0);
             resetDots();
           }}
@@ -41,7 +41,7 @@ export default function Projects() {
         <button
           className="projectArrow arrowRight"
           onClick={() => {
-            setCurrectProject((currentProject + 1) % data.length);
+            setCurrectProject(currentProject + 1);
             setCurrentImage(0);
             resetDots();
           }}

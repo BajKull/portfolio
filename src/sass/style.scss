@@ -4,9 +4,10 @@
 @import "./flexMixin";
 @import "./animations";
 @import "./app";
-@import "./_mainPage";
 @import "./navbar";
-@import "./projectsPage";
+@import "./_mainPage";
+@import "./_projectsPage";
+@import "./_about";
 
 body {
   margin: 0;

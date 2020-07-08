@@ -102,7 +102,7 @@
 }
 
 .page-enter {
-  transform: translateX(-100%);
+  transform: translateX(-125%);
   position: absolute !important;
   top: 0;
   width: 100vw;
@@ -111,8 +111,8 @@
 
 .page-enter-active {
   transform: translateX(0);
-  transition: 1000ms;
-  transition-delay: 250ms;
+  transition: 1.25s;
+  transition-delay: 150ms;
 }
 
 .page-exit {
@@ -121,8 +121,8 @@
 }
 
 .page-exit-active {
-  transition: 1s;
-  transform: translateX(100%);
+  transition: 1.25s;
+  transform: translateX(125%);
 }
 
 .fade-enter {

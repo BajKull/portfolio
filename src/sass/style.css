@@ -152,8 +152,8 @@
 }
 
 .page-enter {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(-125%);
+          transform: translateX(-125%);
   position: absolute !important;
   top: 0;
   width: 100vw;
@@ -163,10 +163,10 @@
 .page-enter-active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: 1000ms;
-  transition: 1000ms;
-  -webkit-transition-delay: 250ms;
-          transition-delay: 250ms;
+  -webkit-transition: 1.25s;
+  transition: 1.25s;
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
 }
 
 .page-exit {
@@ -176,10 +176,10 @@
 }
 
 .page-exit-active {
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transition: 1.25s;
+  transition: 1.25s;
+  -webkit-transform: translateX(125%);
+          transform: translateX(125%);
 }
 
 .fade-enter {
@@ -208,6 +208,56 @@
   max-width: 100vw;
   min-height: 100vh;
   overflow: hidden;
+}
+
+.navMenu {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navMenuBtn {
+  margin: 5px;
+  padding: 10px 30px;
+  border: 0;
+  background: 0;
+  border-radius: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+.navMenuBtn:focus {
+  outline: none;
+}
+
+.navMenuBtn:hover {
+  background: #f0f0f0;
+  border-bottom: 2px solid #8b13d6;
+}
+
+.navMenuBtn img {
+  width: 32px;
+}
+
+.homeBtn {
+  top: 15px;
+  right: 95px;
+}
+
+@media (max-width: 600px) {
+  .homeBtn {
+    right: none;
+    left: 15px;
+  }
 }
 
 .mainPage {
@@ -390,46 +440,6 @@
           animation-fill-mode: forwards;
 }
 
-.navMenuBtn {
-  position: absolute;
-  opacity: 0;
-  top: 15px;
-  right: 15px;
-  border: 0;
-  background: 0;
-  z-index: 10;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
-  -webkit-animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
-          animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.navMenuBtn:focus {
-  outline: none;
-}
-
-.navMenuBtn img {
-  width: 64px;
-}
-
-.homeBtn {
-  top: 15px;
-  right: 95px;
-}
-
-@media (max-width: 600px) {
-  .homeBtn {
-    right: none;
-    left: 15px;
-  }
-}
-
 .projects {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -455,7 +465,7 @@
 
 .projects .projectsTitle {
   font-size: 4rem;
-  margin: 50px 0 75px 0;
+  margin: 100px 0 75px 0;
   text-align: center;
 }
 
@@ -508,7 +518,6 @@
   display: -ms-flexbox;
   display: flex;
   width: 90%;
-  margin-left: 5;
 }
 
 @media (max-width: 1350px) {
@@ -544,6 +553,8 @@
 }
 
 .project .projectImage {
+  position: absolute;
+  top: 0;
   width: 100%;
 }
 
@@ -717,6 +728,152 @@
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+  }
+}
+
+.aboutPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: 125px 10% 0 10%;
+}
+
+.aboutPage .aboutDescription {
+  position: relative;
+  width: 60%;
+  background-color: whitesmoke;
+  padding: 50px;
+}
+
+@media (max-width: 750px) {
+  .aboutPage .aboutDescription {
+    padding: 25px;
+  }
+}
+
+.aboutPage .aboutDescription .aboutAvatar {
+  display: none;
+}
+
+.aboutPage .aboutImage {
+  width: 40%;
+}
+
+.aboutPage .aboutImage img {
+  width: 100%;
+}
+
+.aboutPage h1 {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: #8b13d6;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #21252994;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 750px) {
+  .aboutPage h1 {
+    margin-top: 50px;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+}
+
+.aboutPage a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  width: 259px;
+  margin: 50px auto 0 auto;
+}
+
+@media (max-width: 600px) {
+  .aboutPage a {
+    width: 204px;
+  }
+}
+
+.aboutPage .aboutPageBtn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 259px;
+  border: 0;
+  padding: 0;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .aboutPage .aboutPageBtn {
+    font-size: 1em;
+    width: 204px;
+  }
+}
+
+.aboutPage .aboutPageBtn:hover .eyeLines {
+  opacity: 1;
+}
+
+.aboutPage .aboutPageBtn p {
+  margin: 0;
+  padding: 10px 30px;
+}
+
+.aboutPage .aboutPageBtn .eyeIcon {
+  height: 100%;
+  background: #e6e6e6;
+  border-radius: 0 5px 5px 0;
+  padding: 10px;
+}
+
+.aboutPage .aboutPageBtn .eyeLines {
+  position: absolute;
+  width: 48px;
+  top: 4px;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+@media (max-width: 1600px) {
+  .aboutPage .aboutImage {
+    display: none;
+  }
+  .aboutPage .aboutDescription {
+    width: 100%;
+  }
+  .aboutPage .aboutDescription .aboutAvatar {
+    display: initial;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 20%;
+       object-position: 50% 20%;
+    width: 128px;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 750px) {
+  .aboutPage .aboutDescription .aboutAvatar {
+    right: 0;
+    top: -50px;
+    left: 50%;
+    margin-left: -64px;
   }
 }
 
