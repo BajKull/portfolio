@@ -1,14 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import CrossfadeImage from "react-crossfade-image";
 
-export default function Project({ data, setCurrentImage, activeImage }) {
-  useEffect(() => {
-    document
-      .getElementsByClassName("projectImagesDot")[0]
-      .classList.add("dotActive");
-  }, []);
-
+export default function Project({
+  data,
+  setCurrentImage,
+  activeImage,
+  timeout,
+  setImageTimeout,
+}) {
   const switchImage = (e) => {
+    clearTimeout(timeout);
     const dotsContainer = document.getElementsByClassName(
       "projectImagesDots"
     )[0];
@@ -18,15 +19,25 @@ export default function Project({ data, setCurrentImage, activeImage }) {
     const index = childrenDots.indexOf(e.target);
     childrenDots[index].classList.add("dotActive");
     setCurrentImage(index);
+    setImageTimeout();
   };
 
   return (
     <div className="project">
       <div className="projectImages">
-        <CrossfadeImage className="projectImage" src={activeImage} alt="" />
+        <CrossfadeImage
+          duration={1000}
+          className="projectImage"
+          src={activeImage}
+          alt=""
+        />
         <div className="projectImagesDots">
           {data.images.map((img, i) => (
-            <span className="projectImagesDot" key={i} onClick={switchImage} />
+            <span
+              className="projectImagesDot"
+              key={i}
+              onClick={(e) => switchImage(e)}
+            />
           ))}
         </div>
       </div>
