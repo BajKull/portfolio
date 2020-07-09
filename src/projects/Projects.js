@@ -45,10 +45,13 @@ export default function Projects() {
       .getElementsByClassName("projectImagesDot")[0]
       .classList.add("dotActive");
     setImageTimeout();
-    return function cleanup() {
+  }, []);
+
+  useEffect(() => {
+    return () => {
       clearTimeout(timeout);
     };
-  }, []);
+  }, [timeout]);
 
   return (
     <div className="projects">
