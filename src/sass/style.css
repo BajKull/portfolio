@@ -117,36 +117,28 @@
   }
 }
 
-@-webkit-keyframes swingFromTop {
+@-webkit-keyframes animationFadeFromBottom {
   0% {
-    -webkit-transform: rotateX(-100deg);
-            transform: rotateX(-100deg);
-    -webkit-transform-origin: top;
-            transform-origin: top;
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    -webkit-transform-origin: top;
-            transform-origin: top;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 1;
   }
 }
 
-@keyframes swingFromTop {
+@keyframes animationFadeFromBottom {
   0% {
-    -webkit-transform: rotateX(-100deg);
-            transform: rotateX(-100deg);
-    -webkit-transform-origin: top;
-            transform-origin: top;
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    -webkit-transform-origin: top;
-            transform-origin: top;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 1;
   }
 }
@@ -456,47 +448,50 @@
           justify-content: center;
 }
 
-.projects .project {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
 .projects .projectsTitle {
   font-size: 4rem;
   margin: 100px 0 75px 0;
   text-align: center;
 }
 
-.projects .projectsArrows {
-  position: relative;
-  width: 20%;
-  height: 52px;
-  margin: 50px 40% 50px 40%;
-}
-
-@media (max-width: 1300px) {
-  .projects .projectsArrows {
-    width: 40%;
-  }
-}
-
 @media (max-width: 600px) {
-  .projects .projectsArrows {
-    width: 70%;
+  .projects .projectsTitle {
+    font-size: 2.75rem;
+    margin: 75px 0 25px 0;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #8b13d6;
   }
 }
 
 .projects .projectArrow {
   border: 0;
+  top: 30px;
   background-color: #8b13d6;
-  padding: 10px 35px;
+  padding: 5px 15px;
   border-radius: 5px;
+  z-index: 1;
+}
+
+@media (max-width: 1400px) {
+  .projects .projectArrow {
+    top: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects .projectArrow {
+    top: 28px;
+  }
+}
+
+@media (max-width: 350px) {
+  .projects .projectArrow {
+    padding: 5px 10px;
+  }
 }
 
 .projects .projectArrow img {
-  width: 32px;
+  width: 24px;
 }
 
 .projects .projectArrow:hover {
@@ -505,22 +500,35 @@
 
 .projects .arrowLeft {
   position: absolute;
-  left: 0;
+  left: 25px;
+}
+
+@media (max-width: 600px) {
+  .projects .arrowLeft {
+    left: 5%;
+  }
 }
 
 .projects .arrowRight {
   position: absolute;
-  right: 0;
+  right: 25px;
+}
+
+@media (max-width: 600px) {
+  .projects .arrowRight {
+    right: 5%;
+  }
 }
 
 .project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   width: 90%;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
   .project {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -538,6 +546,12 @@
   }
 }
 
+@media (max-width: 600px) {
+  .project {
+    width: 100%;
+  }
+}
+
 .project .projectImages {
   position: relative;
   width: 60%;
@@ -545,17 +559,22 @@
   margin-left: 5%;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
   .project .projectImages {
     width: 90%;
     margin: 0;
   }
 }
 
-.project .projectImage {
-  position: absolute;
-  top: 0;
+@media (max-width: 600px) {
+  .project .projectImages {
+    width: 100%;
+  }
+}
+
+.project .CrossfadeImage {
   width: 100%;
+  min-height: 26.6vw;
 }
 
 .project .projectImagesDots {
@@ -569,6 +588,12 @@
   width: 100%;
   bottom: -35px;
   z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .project .projectImagesDots {
+    display: none;
+  }
 }
 
 .project .projectImagesDot {
@@ -591,7 +616,7 @@
   background-color: #f0f0f0;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
   .project .projectInfo {
     width: 90%;
     margin: 0;
@@ -600,6 +625,7 @@
 
 @media (max-width: 600px) {
   .project .projectInfo {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -622,9 +648,15 @@
   margin: 15px;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
   .project .projectTitle {
-    margin-top: 45px;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project .projectTitle {
+    margin-top: 15px;
   }
 }
 
@@ -632,7 +664,7 @@
   padding: 25px;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
   .project .projectDescription {
     margin-bottom: 75px;
   }
@@ -650,6 +682,7 @@
   font-size: 24px;
   padding: 10px 75px;
   font-weight: 600;
+  min-width: 120px;
 }
 
 @media (max-width: 1800px) {
@@ -658,7 +691,7 @@
   }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
   .project .projectBtnHref {
     padding: 10px 75px;
   }
@@ -683,7 +716,7 @@
   left: 25px;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
   .project .projectHref1 {
     left: 25%;
   }
@@ -698,9 +731,6 @@
 @media (max-width: 600px) {
   .project .projectHref1 {
     position: initial;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
   }
 }
 
@@ -710,7 +740,7 @@
   right: 25px;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
   .project .projectHref2 {
     right: 25%;
   }
@@ -725,9 +755,6 @@
 @media (max-width: 600px) {
   .project .projectHref2 {
     position: initial;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
   }
 }
 
@@ -875,6 +902,94 @@
     left: 50%;
     margin-left: -64px;
   }
+}
+
+.skills {
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+.skills .bg {
+  position: absolute;
+  margin: 0;
+  top: -150px;
+  z-index: -1;
+  width: 80%;
+  left: 10%;
+}
+
+.skills h1 {
+  width: 100%;
+  text-align: center;
+  padding: 100px;
+  background-color: #8b13d6;
+  color: white;
+}
+
+.skillsIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  margin: 0 10% 0 10%;
+}
+
+.skillsCard {
+  position: relative;
+  min-width: 175px;
+  padding: 25px;
+  margin: 25px;
+  border-radius: 5px;
+  background-color: white;
+  color: #212529;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skillsCard .skillsTopBar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 84px;
+}
+
+.skillsCard h4 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.skillsIcon {
+  position: relative;
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  padding: 25px;
+  background-color: white;
+  color: #8b13d6;
+}
+
+.skillsIcon img {
+  width: 64px;
+  height: 64px;
 }
 
 body {

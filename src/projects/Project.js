@@ -1,5 +1,7 @@
 import React from "react";
 import CrossfadeImage from "react-crossfade-image";
+import ArrowLeft from "../icons/arrowLeft.svg";
+import ArrowRight from "../icons/arrowRight.svg";
 
 export default function Project({
   data,
@@ -7,6 +9,7 @@ export default function Project({
   activeImage,
   timeout,
   setImageTimeout,
+  arrowClick,
 }) {
   const switchImage = (e) => {
     clearTimeout(timeout);
@@ -43,6 +46,18 @@ export default function Project({
       </div>
       <div className="projectInfo">
         <h1 className="projectTitle">{data.title}</h1>
+        <button
+          className="projectArrow arrowLeft"
+          onClick={() => arrowClick(-1)}
+        >
+          <img src={ArrowLeft} alt="<" />
+        </button>
+        <button
+          className="projectArrow arrowRight"
+          onClick={() => arrowClick(-1)}
+        >
+          <img src={ArrowRight} alt=">" />
+        </button>
         <p className="projectDescription">{data.description}</p>
         <div className="projectHrefs">
           <button className="projectBtnHref projectHref1">Demo</button>

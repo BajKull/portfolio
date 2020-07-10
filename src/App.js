@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Main from "./main/Main";
 import Projects from "./projects/Projects";
 import About from "./about/About";
+import Skills from "./skills/Skills";
 import Navbar from "./navbar/Navbar";
 
 import "./sass/style.css";
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/" exact component={Main} />
                 <Route path="/projects" exact component={Projects} />
                 <Route path="/about" exact component={About} />
+                <Route path="/skills" exact component={Skills} />
               </Switch>
             </CSSTransition>
           </TransitionGroup>

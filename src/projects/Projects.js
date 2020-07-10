@@ -2,15 +2,13 @@ import React, { useEffect, useState } from "react";
 import Project from "./Project";
 import data from "./data/ProjectData";
 
-import ArrowLeft from "../icons/arrowLeft.svg";
-import ArrowRight from "../icons/arrowRight.svg";
-
 export default function Projects() {
   const [currentProject, setCurrectProject] = useState(data.length * 300);
   const [currentImage, setCurrentImage] = useState(0);
   const [timeout, makeTimeout] = useState(null);
   const project = data[currentProject % data.length];
   const activeImage = project.images[currentImage];
+
   const resetDots = () => {
     const dots = Array.from(
       document.getElementsByClassName("projectImagesDots")[0].children
@@ -63,22 +61,8 @@ export default function Projects() {
         activeImage={activeImage}
         timeout={timeout}
         setImageTimeout={setImageTimeout}
+        arrowClick={arrowClick}
       />
-
-      <div className="projectsArrows">
-        <button
-          className="projectArrow arrowLeft"
-          onClick={() => arrowClick(-1)}
-        >
-          <img src={ArrowLeft} alt="<" />
-        </button>
-        <button
-          className="projectArrow arrowRight"
-          onClick={() => arrowClick(-1)}
-        >
-          <img src={ArrowRight} alt=">" />
-        </button>
-      </div>
     </div>
   );
 }

@@ -2,40 +2,39 @@
   @include flexColumn;
   // @include animationSlideLeft(1s, 0s);
 
-  .project {
-    display: flex;
-    position: relative;
-  }
-
   .projectsTitle {
     font-size: 4rem;
     margin: 100px 0 75px 0;
     text-align: center;
-  }
-
-  .projectsArrows {
-    position: relative;
-    width: 20%;
-    height: 52px;
-    margin: 50px 40% 50px 40%;
-
-    @include breakpoint(1300px) {
-      width: 40%;
-    }
 
     @include breakpoint(600px) {
-      width: 70%;
+      font-size: 2.75rem;
+      margin: 75px 0 25px 0;
+      padding-bottom: 25px;
+      border-bottom: 2px solid $primaryColor;
     }
   }
 
   .projectArrow {
     border: 0;
+    top: 30px;
     background-color: $primaryColor;
-    padding: 10px 35px;
+    padding: 5px 15px;
     border-radius: 5px;
+    z-index: 1;
+
+    @include breakpoint(1400px) {
+      top: 60px;
+    }
+    @include breakpoint(600px) {
+      top: 28px;
+    }
+    @include breakpoint(350px) {
+      padding: 5px 10px;
+    }
 
     img {
-      width: 32px;
+      width: 24px;
     }
 
     &:hover {
@@ -45,21 +44,32 @@
 
   .arrowLeft {
     position: absolute;
-    left: 0;
+    left: 25px;
+    @include breakpoint(600px) {
+      left: 5%;
+    }
   }
 
   .arrowRight {
     position: absolute;
-    right: 0;
+    right: 25px;
+    @include breakpoint(600px) {
+      right: 5%;
+    }
   }
 }
 
 .project {
   display: flex;
+  position: relative;
   width: 90%;
 
-  @include breakpoint(1350px) {
+  @include breakpoint(1400px) {
     @include flexColumn;
+  }
+
+  @include breakpoint(600px) {
+    width: 100%;
   }
 
   .projectImages {
@@ -67,16 +77,18 @@
     width: 60%;
     height: auto;
     margin-left: 5%;
-    @include breakpoint(1350px) {
+    @include breakpoint(1400px) {
       width: 90%;
       margin: 0;
     }
+    @include breakpoint(600px) {
+      width: 100%;
+    }
   }
 
-  .projectImage {
-    position: absolute;
-    top: 0;
+  .CrossfadeImage {
     width: 100%;
+    min-height: 26.6vw;
   }
 
   .projectImagesDots {
@@ -86,6 +98,10 @@
     width: 100%;
     bottom: -35px;
     z-index: 1;
+
+    @include breakpoint(600px) {
+      display: none;
+    }
   }
 
   .projectImagesDot {
@@ -106,11 +122,12 @@
     position: relative;
     width: 30%;
     background-color: rgb(240, 240, 240);
-    @include breakpoint(1350px) {
+    @include breakpoint(1400px) {
       width: 90%;
       margin: 0;
     }
     @include breakpoint(600px) {
+      width: 100%;
       @include flexColumn;
     }
   }
@@ -119,14 +136,17 @@
     text-align: center;
     font-size: 3rem;
     margin: 15px;
-    @include breakpoint(1350px) {
-      margin-top: 45px;
+    @include breakpoint(1400px) {
+      margin-top: 50px;
+    }
+    @include breakpoint(600px) {
+      margin-top: 15px;
     }
   }
 
   .projectDescription {
     padding: 25px;
-    @include breakpoint(1350px) {
+    @include breakpoint(1400px) {
       margin-bottom: 75px;
     }
     @include breakpoint(600px) {
@@ -140,11 +160,12 @@
     font-size: 24px;
     padding: 10px 75px;
     font-weight: 600;
+    min-width: 120px;
 
     @include breakpoint(1800px) {
       padding: 10px 35px;
     }
-    @include breakpoint(1350px) {
+    @include breakpoint(1400px) {
       padding: 10px 75px;
     }
     @include breakpoint(900px) {
@@ -160,7 +181,7 @@
     position: absolute;
     bottom: 15px;
     left: 25px;
-    @include breakpoint(1350px) {
+    @include breakpoint(1400px) {
       left: 25%;
     }
     @include breakpoint(1200px) {
@@ -168,7 +189,6 @@
     }
     @include breakpoint(600px) {
       position: initial;
-      display: inline-flex;
     }
   }
 
@@ -176,7 +196,7 @@
     position: absolute;
     bottom: 15px;
     right: 25px;
-    @include breakpoint(1350px) {
+    @include breakpoint(1400px) {
       right: 25%;
     }
     @include breakpoint(1200px) {
@@ -184,7 +204,6 @@
     }
     @include breakpoint(600px) {
       position: initial;
-      display: inline-flex;
     }
   }
 }

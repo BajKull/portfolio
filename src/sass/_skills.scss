@@ -1,0 +1,76 @@
+.skills {
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+
+  .bg {
+    position: absolute;
+    margin: 0;
+    top: -150px;
+    z-index: -1;
+    width: 80%;
+    left: 10%;
+  }
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    padding: 100px;
+    background-color: $primaryColor;
+    color: $primaryColorText;
+  }
+}
+
+.skillsIcons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 10% 0 10%;
+}
+
+.skillsCard {
+  position: relative;
+  min-width: 175px;
+  padding: 25px;
+  margin: 25px;
+  border-radius: 5px;
+  background-color: white;
+  color: $secondaryColorText;
+  @include flexColumn;
+
+  // opacity: 0;
+  // @for $i from 1 through 14 {
+  //   &:nth-child(#{$i}) {
+  //     @include animationFadeFromBottom(0.75s, #{$i * 0.03 + 0.5}s);
+  //   }
+  // }
+
+  .skillsTopBar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 84px;
+    // background-color: lighten($primaryColor, 20);
+  }
+
+  h4 {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+.skillsIcon {
+  position: relative;
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  padding: 25px;
+  background-color: white;
+  color: $primaryColor;
+
+  img {
+    width: 64px;
+    height: 64px;
+  }
+}
