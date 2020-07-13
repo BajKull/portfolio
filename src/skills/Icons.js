@@ -12,6 +12,7 @@ import Rest from "./icons/rest.svg";
 import Rwd from "./icons/rwd.svg";
 import Sass from "./icons/sass.svg";
 import Socket from "./icons/socketio.svg";
+import Firebase from "./icons/firebase.svg";
 
 const icons = [
   {
@@ -23,24 +24,20 @@ const icons = [
     icon: Css,
   },
   {
-    name: "ES6",
-    icon: Es6,
+    name: "Sass",
+    icon: Sass,
   },
   {
-    name: "Express",
-    icon: Express,
-  },
-  {
-    name: "Git",
-    icon: Github,
+    name: "RWD",
+    icon: Rwd,
   },
   {
     name: "JavaScript",
     icon: Js,
   },
   {
-    name: "MySQL",
-    icon: Mysql,
+    name: "ES6",
+    icon: Es6,
   },
   {
     name: "NodeJS",
@@ -51,24 +48,32 @@ const icons = [
     icon: Npm,
   },
   {
-    name: "React",
-    icon: React,
-  },
-  {
     name: "Rest API",
     icon: Rest,
   },
   {
-    name: "RWD",
-    icon: Rwd,
+    name: "Git",
+    icon: Github,
   },
   {
-    name: "Sass",
-    icon: Sass,
+    name: "React",
+    icon: React,
+  },
+  {
+    name: "Express",
+    icon: Express,
   },
   {
     name: "Socket.io",
     icon: Socket,
+  },
+  {
+    name: "MySQL",
+    icon: Mysql,
+  },
+  {
+    name: "Firebase",
+    icon: Firebase,
   },
 ];
 

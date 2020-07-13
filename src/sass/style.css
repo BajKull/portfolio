@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
 @-webkit-keyframes slideLeft {
   0% {
@@ -1010,8 +1010,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 80%;
-  margin: 0 10% 0 10%;
+  width: 90%;
+  margin: 0 5% 0 5%;
 }
 
 .skillsCard {
@@ -1106,7 +1106,7 @@
   background-color: white;
   -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
-  padding: 50px;
+  padding: 50px 50px 25px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1119,7 +1119,7 @@
   .contactForm {
     width: 90%;
     margin: 25px 5% 0 5%;
-    padding: 25px;
+    padding: 50px 25px 25px 25px;
     border-radius: 5px;
   }
 }
@@ -1213,9 +1213,11 @@
 .contactForm .contactBtn {
   width: 100%;
   text-align: center;
+  padding-bottom: 25px;
+  margin-top: 50px;
 }
 
-.contactForm .contactSend {
+.contactForm .contactBtn .contactSend {
   margin-left: 15px;
   border: 0;
   border-radius: 5px;
@@ -1224,10 +1226,59 @@
   padding: 15px 50px;
 }
 
-.contactForm .contactSend:focus {
+.contactForm .contactBtn .contactSend:focus {
   outline: none;
   -webkit-box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.75);
           box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+.contactForm .contactBtn .contactSent {
+  padding: 14px;
+  margin: auto;
+  width: 60%;
+}
+
+@media (max-width: 600px) {
+  .contactForm .contactBtn .contactSent {
+    width: 90%;
+  }
+}
+
+.contactForm .contactBtn .contactApproved {
+  color: #2b7a3d;
+  background: #cfeed6;
+  border: 1px solid #4bc066;
+  border-left: 5px solid #4bc066;
+  border-radius: 5px;
+}
+
+.contactForm .contactBtn .contactError {
+  color: #7a2b2b;
+  background: #eecfcf;
+  border: 1px solid #c04b4b;
+  border-left: 5px solid #c04b4b;
+  border-radius: 5px;
+}
+
+.contactForm .contactBtn .contactLoading {
+  position: absolute;
+  width: 32px;
+  right: 50%;
+  margin-right: -24px;
+  bottom: 5px;
+}
+
+.contactForm .contactBtn .contactHidden {
+  display: none;
+}
+
+.contactForm .contactMail {
+  position: absolute;
+  margin: 0;
+  top: 5px;
+  right: 15px;
+  font-size: 14px;
+  color: #cccccc;
 }
 
 body {
