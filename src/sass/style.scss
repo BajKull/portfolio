@@ -1,14 +1,16 @@
 @import "./breakpoint";
-@import "./_colors";
-@import "./_font";
+@import "./colors";
+@import "./font";
 @import "./flexMixin";
 @import "./animations";
+@import "./button";
 @import "./app";
 @import "./navbar";
-@import "./_mainPage";
-@import "./_projectsPage";
-@import "./_about";
-@import "./_skills";
+@import "./mainPage";
+@import "./projectsPage";
+@import "./about";
+@import "./skills";
+@import "./contact";
 
 body {
   margin: 0;

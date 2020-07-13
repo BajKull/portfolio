@@ -1,9 +1,14 @@
 import React from "react";
 import Icons from "./Icons";
 
+import EyeIcon from "../icons/eye.svg";
+import EveOverIcon from "../icons/linesOverEye.svg";
+import { Link } from "react-router-dom";
+
 export default function Skills() {
   return (
     <div className="skills">
+      <div className="bg"></div>
       <h1>Moje umiejętności</h1>
       {/* <img className="bg" src={Screen} alt="" /> */}
       <div className="skillsIcons">
@@ -17,6 +22,13 @@ export default function Skills() {
           </div>
         ))}
       </div>
+      <Link to="/contact">
+        <button className="skillsBtn navigationButton">
+          <p>Kontakt</p>
+          <img className="eyeLines" src={EveOverIcon} alt="" />
+          <img className="eyeIcon" src={EyeIcon} alt="" />
+        </button>
+      </Link>
     </div>
   );
 }

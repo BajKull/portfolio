@@ -3,13 +3,17 @@ import AboutImage from "./aboutImage.jpeg";
 import AboutAvatar from "./aboutAvatar.jpg";
 import EyeIcon from "../icons/eye.svg";
 import EveOverIcon from "../icons/linesOverEye.svg";
+import PersonIcon from "../icons/person.svg";
 import { Link } from "react-router-dom";
 
 export default function About() {
   return (
     <div className="aboutPage">
       <div className="aboutDescription">
-        <h1> Poznaj mnie </h1>
+        <h1>
+          Poznaj mnie
+          <img className="aboutPerson" src={PersonIcon} alt="" />
+        </h1>
         <img className="aboutAvatar" src={AboutAvatar} alt="" />
         <p>Cześć!</p>
         <p>

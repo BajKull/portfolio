@@ -3,13 +3,18 @@
   width: 80%;
   margin: 125px 10% 0 10%;
 
+  @include breakpoint(825px) {
+    width: 90%;
+    margin: 125px 5% 25px 5%;
+  }
+
   .aboutDescription {
     position: relative;
     width: 60%;
     background-color: rgb(245, 245, 245);
     padding: 50px;
 
-    @include breakpoint(750px) {
+    @include breakpoint(825px) {
       padding: 25px;
     }
 
@@ -26,18 +31,35 @@
     }
   }
 
+  .aboutPerson {
+    position: absolute;
+    width: 64px;
+    top: 15px;
+    right: -75px;
+
+    @include breakpoint(825px) {
+      width: 48px;
+      right: -60px;
+    }
+
+    @include breakpoint(500px) {
+      width: 0;
+    }
+  }
+
   h1 {
     display: inline-flex;
     color: $primaryColor;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     margin-bottom: 25px;
     border-bottom: 2px solid #21252994;
     font-size: 3.5rem;
     text-transform: uppercase;
+    position: relative;
 
-    @include breakpoint(750px) {
+    @include breakpoint(825px) {
       margin-top: 50px;
-      font-size: 3.5rem;
+      font-size: 3rem;
       text-align: center;
     }
   }
@@ -117,7 +139,7 @@
     }
   }
 
-  @include breakpoint(750px) {
+  @include breakpoint(825px) {
     .aboutDescription {
       .aboutAvatar {
         right: 0;

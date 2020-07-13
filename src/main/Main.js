@@ -11,7 +11,7 @@ export default function Main() {
 
       <h1> Mam to coś </h1>
       <Link to="/projects">
-        <button className="mainBtnProjects">
+        <button className="mainBtnProjects navigationButton">
           <p>Projekty</p>
           <img className="eyeLines" src={EveOverIcon} alt="" />
           <img className="eyeIcon" src={EyeIcon} alt="" />

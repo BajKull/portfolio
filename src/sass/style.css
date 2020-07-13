@@ -195,6 +195,56 @@
   opacity: 1;
 }
 
+.navigationButton {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 225px;
+  border: 0;
+  padding: 0;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 35px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.navigationButton:focus {
+  outline: none;
+}
+
+.navigationButton:focus .eyeLines {
+  opacity: 1;
+}
+
+.navigationButton:hover .eyeLines {
+  opacity: 1;
+}
+
+.navigationButton p {
+  margin: 0;
+  padding: 10px 40px;
+}
+
+.navigationButton .eyeIcon {
+  height: 100%;
+  background: #e6e6e6;
+  border-radius: 0 5px 5px 0;
+  padding: 10px;
+}
+
+.navigationButton .eyeLines {
+  position: absolute;
+  opacity: 0;
+  width: 48px;
+  top: 4px;
+  right: 0;
+  z-index: 1;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
 .app {
   position: relative;
   max-width: 100vw;
@@ -218,22 +268,33 @@
           justify-content: center;
 }
 
+.navbarBg {
+  width: 1920px;
+  position: absolute;
+  top: -300px;
+  z-index: 5;
+}
+
+.navActive {
+  -webkit-box-shadow: 0 8px 0 -5px #8b13d6;
+          box-shadow: 0 8px 0 -5px #8b13d6;
+}
+
 .navMenuBtn {
   margin: 5px;
   padding: 10px 30px;
   border: 0;
   background: 0;
   border-radius: 5px;
-  border-bottom: 2px solid transparent;
 }
 
 .navMenuBtn:focus {
   outline: none;
+  background: #414141;
 }
 
 .navMenuBtn:hover {
-  background: #f0f0f0;
-  border-bottom: 2px solid #8b13d6;
+  background: #414141;
 }
 
 .navMenuBtn img {
@@ -280,7 +341,7 @@
   padding: 0;
   width: 100%;
   height: 100vh;
-  z-index: -1;
+  z-index: -10;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-animation-duration: 1s;
@@ -303,18 +364,6 @@
 }
 
 .mainPage .mainBtnProjects {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 225px;
-  border: 0;
-  padding: 0;
-  background-color: white;
-  border-radius: 5px;
-  margin-top: 35px;
-  font-size: 24px;
-  font-weight: 500;
   -webkit-transition: 0.25s;
   transition: 0.25s;
   -webkit-animation-duration: 0.8s;
@@ -325,23 +374,6 @@
           animation-name: AFKAttention;
 }
 
-.mainPage .mainBtnProjects:focus {
-  outline: none;
-}
-
-.mainPage .mainBtnProjects:focus .eyeLines {
-  opacity: 1;
-}
-
-.mainPage .mainBtnProjects:hover {
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
-          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
-}
-
-.mainPage .mainBtnProjects:hover .eyeLines {
-  opacity: 1;
-}
-
 @media (max-width: 500px) {
   .mainPage .mainBtnProjects {
     margin-top: 15px;
@@ -349,9 +381,7 @@
 }
 
 .mainPage .mainBtnProjects p {
-  margin: 0;
   opacity: 0;
-  padding: 10px 40px;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-delay: 0.5s;
@@ -365,10 +395,6 @@
 }
 
 .mainPage .mainBtnProjects .eyeIcon {
-  height: 100%;
-  background: #e6e6e6;
-  border-radius: 0 5px 5px 0;
-  padding: 10px;
   opacity: 0;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
@@ -380,17 +406,6 @@
           animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-.mainPage .mainBtnProjects .eyeLines {
-  position: absolute;
-  opacity: 0;
-  width: 48px;
-  top: 4px;
-  right: 0;
-  z-index: 1;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
 }
 
 .mainPage h1 {
@@ -766,6 +781,13 @@
   margin: 125px 10% 0 10%;
 }
 
+@media (max-width: 825px) {
+  .aboutPage {
+    width: 90%;
+    margin: 125px 5% 25px 5%;
+  }
+}
+
 .aboutPage .aboutDescription {
   position: relative;
   width: 60%;
@@ -773,7 +795,7 @@
   padding: 50px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 825px) {
   .aboutPage .aboutDescription {
     padding: 25px;
   }
@@ -791,22 +813,43 @@
   width: 100%;
 }
 
+.aboutPage .aboutPerson {
+  position: absolute;
+  width: 64px;
+  top: 15px;
+  right: -75px;
+}
+
+@media (max-width: 825px) {
+  .aboutPage .aboutPerson {
+    width: 48px;
+    right: -60px;
+  }
+}
+
+@media (max-width: 500px) {
+  .aboutPage .aboutPerson {
+    width: 0;
+  }
+}
+
 .aboutPage h1 {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   color: #8b13d6;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   margin-bottom: 25px;
   border-bottom: 2px solid #21252994;
   font-size: 3.5rem;
   text-transform: uppercase;
+  position: relative;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 825px) {
   .aboutPage h1 {
     margin-top: 50px;
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-align: center;
   }
 }
@@ -895,7 +938,7 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 825px) {
   .aboutPage .aboutDescription .aboutAvatar {
     right: 0;
     top: -50px;
@@ -906,24 +949,53 @@
 
 .skills {
   width: 100%;
-  background-color: whitesmoke;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, from(#450f67), to(#8b13d6));
+  background: linear-gradient(90deg, #450f67 0%, #8b13d6 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skills a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
 }
 
 .skills .bg {
   position: absolute;
-  margin: 0;
-  top: -150px;
+  top: 0;
+  height: 100vh;
+  width: 100%;
   z-index: -1;
-  width: 80%;
-  left: 10%;
+  background: -webkit-gradient(linear, left top, right top, from(#450f67), to(#8b13d6));
+  background: linear-gradient(90deg, #450f67 0%, #8b13d6 100%);
 }
 
 .skills h1 {
   width: 100%;
   text-align: center;
-  padding: 100px;
-  background-color: #8b13d6;
   color: white;
+  font-size: 3rem;
+  margin: 50px;
+}
+
+@media (max-width: 600px) {
+  .skills h1 {
+    padding: 100px 25px 50px 25px;
+  }
 }
 
 .skillsIcons {
@@ -946,7 +1018,7 @@
   position: relative;
   min-width: 175px;
   padding: 25px;
-  margin: 25px;
+  margin: 15px;
   border-radius: 5px;
   background-color: white;
   color: #212529;
@@ -990,6 +1062,172 @@
 .skillsIcon img {
   width: 64px;
   height: 64px;
+}
+
+.skillsBtn {
+  margin-bottom: 25px;
+}
+
+.skillsBtn .eyeLines {
+  right: 3px;
+}
+
+.contact {
+  width: 100%;
+  background-color: #f6ebfd;
+  padding-bottom: 25px;
+}
+
+.contact .bg {
+  position: absolute;
+  top: 0;
+  background-color: #f6ebfd;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+}
+
+.contact h1 {
+  text-align: center;
+  margin-top: 100px;
+  padding: 25px;
+}
+
+@media (max-width: 600px) {
+  .contact h1 {
+    font-size: 2rem;
+    margin-top: 50px;
+  }
+}
+
+.contactForm {
+  width: 750px;
+  margin: 25px auto 0 auto;
+  background-color: white;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .contactForm {
+    width: 90%;
+    margin: 25px 5% 0 5%;
+    padding: 25px;
+    border-radius: 5px;
+  }
+}
+
+.contactForm .contactBg {
+  position: absolute;
+  width: 64px;
+  right: -48px;
+  top: -32px;
+}
+
+@media (max-width: 600px) {
+  .contactForm .contactBg {
+    width: 32px;
+    right: -16px;
+    top: -16px;
+  }
+}
+
+.contactForm form {
+  width: 100%;
+}
+
+.contactForm form img {
+  width: 32px;
+  margin-top: 7px;
+}
+
+@media (max-width: 600px) {
+  .contactForm form img {
+    display: none;
+  }
+}
+
+.contactForm label {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.contactForm label textarea {
+  margin: auto;
+  width: 85%;
+  padding: 10px;
+  border: 1px solid #c8c8c8;
+  border-radius: 5px;
+  min-height: 150px;
+}
+
+@media (max-width: 600px) {
+  .contactForm label textarea {
+    width: 100%;
+  }
+}
+
+.contactForm label textarea:focus {
+  outline: none;
+  border: 1px solid transparent;
+  -webkit-box-shadow: inset 0 0 0 2px #8b13d6;
+          box-shadow: inset 0 0 0 2px #8b13d6;
+}
+
+.contactForm label input {
+  margin: auto;
+  width: 85%;
+  padding: 10px;
+  border: 1px solid #c8c8c8;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .contactForm label input {
+    width: 100%;
+  }
+}
+
+.contactForm label input:focus {
+  outline: none;
+  border: 1px solid transparent;
+  -webkit-box-shadow: inset 0 0 0 2px #8b13d6;
+          box-shadow: inset 0 0 0 2px #8b13d6;
+}
+
+.contactForm .contactBtn {
+  width: 100%;
+  text-align: center;
+}
+
+.contactForm .contactSend {
+  margin-left: 15px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #8b13d6;
+  color: white;
+  padding: 15px 50px;
+}
+
+.contactForm .contactSend:focus {
+  outline: none;
+  -webkit-box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.75);
+          box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.75);
 }
 
 body {

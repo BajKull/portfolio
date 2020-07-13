@@ -1,0 +1,133 @@
+.contact {
+  width: 100%;
+  background-color: lighten($primaryColor, 50);
+  padding-bottom: 25px;
+
+  .bg {
+    position: absolute;
+    top: 0;
+    background-color: lighten($primaryColor, 50);
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 100px;
+    padding: 25px;
+
+    @include breakpoint(600px) {
+      font-size: 2rem;
+      margin-top: 50px;
+    }
+  }
+}
+
+.contactForm {
+  width: 750px;
+  margin: 25px auto 0 auto;
+  background-color: white;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  @include breakpoint(900px) {
+    width: 90%;
+    margin: 25px 5% 0 5%;
+    padding: 25px;
+    border-radius: 5px;
+  }
+
+  .contactBg {
+    position: absolute;
+    width: 64px;
+    right: -48px;
+    top: -32px;
+
+    @include breakpoint(600px) {
+      width: 32px;
+      right: -16px;
+      top: -16px;
+    }
+  }
+
+  form {
+    width: 100%;
+
+    img {
+      width: 32px;
+      margin-top: 7px;
+
+      @include breakpoint(600px) {
+        display: none;
+      }
+    }
+  }
+
+  label {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 25px;
+
+    textarea {
+      margin: auto;
+      width: 85%;
+      padding: 10px;
+      border: 1px solid rgb(200, 200, 200);
+      border-radius: 5px;
+      min-height: 150px;
+
+      @include breakpoint(600px) {
+        width: 100%;
+      }
+
+      &:focus {
+        outline: none;
+        border: 1px solid transparent;
+        box-shadow: inset 0 0 0 2px $primaryColor;
+      }
+    }
+
+    input {
+      margin: auto;
+      width: 85%;
+      padding: 10px;
+      border: 1px solid rgb(200, 200, 200);
+      border-radius: 5px;
+
+      @include breakpoint(600px) {
+        width: 100%;
+      }
+
+      &:focus {
+        outline: none;
+        border: 1px solid transparent;
+        box-shadow: inset 0 0 0 2px $primaryColor;
+      }
+    }
+  }
+
+  .contactBtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contactSend {
+    margin-left: 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: $primaryColor;
+    color: white;
+    padding: 15px 50px;
+
+    &:focus {
+      outline: none;
+      box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.75);
+    }
+  }
+}

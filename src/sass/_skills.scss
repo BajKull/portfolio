@@ -1,22 +1,41 @@
 .skills {
   width: 100%;
-  background-color: rgb(245, 245, 245);
+  min-height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgba(69, 15, 103, 1) 0%,
+    rgba(139, 19, 214, 1) 100%
+  );
+  @include flexColumn;
+
+  a {
+    display: flex;
+    text-decoration: none;
+  }
 
   .bg {
     position: absolute;
-    margin: 0;
-    top: -150px;
+    top: 0;
+    height: 100vh;
+    width: 100%;
     z-index: -1;
-    width: 80%;
-    left: 10%;
+    background: linear-gradient(
+      90deg,
+      rgba(69, 15, 103, 1) 0%,
+      rgba(139, 19, 214, 1) 100%
+    );
   }
 
   h1 {
     width: 100%;
     text-align: center;
-    padding: 100px;
-    background-color: $primaryColor;
     color: $primaryColorText;
+    font-size: 3rem;
+    margin: 50px;
+
+    @include breakpoint(600px) {
+      padding: 100px 25px 50px 25px;
+    }
   }
 }
 
@@ -33,18 +52,11 @@
   position: relative;
   min-width: 175px;
   padding: 25px;
-  margin: 25px;
+  margin: 15px;
   border-radius: 5px;
   background-color: white;
   color: $secondaryColorText;
   @include flexColumn;
-
-  // opacity: 0;
-  // @for $i from 1 through 14 {
-  //   &:nth-child(#{$i}) {
-  //     @include animationFadeFromBottom(0.75s, #{$i * 0.03 + 0.5}s);
-  //   }
-  // }
 
   .skillsTopBar {
     position: absolute;
@@ -72,5 +84,12 @@
   img {
     width: 64px;
     height: 64px;
+  }
+}
+
+.skillsBtn {
+  margin-bottom: 25px;
+  .eyeLines {
+    right: 3px;
   }
 }
