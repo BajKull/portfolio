@@ -8,7 +8,6 @@ import About from "./about/About";
 import Skills from "./skills/Skills";
 import Contact from "./contact/Contact";
 import Navbar from "./navbar/Navbar";
-import Background from "./icons/bg.svg";
 
 import "./sass/style.css";
 
@@ -28,9 +27,6 @@ function App() {
   return (
     <div className="app">
       <Navbar path={location} />
-      <div className="navbarBg">
-        <img src={Background} alt="" />
-      </div>
       <Route
         render={({ location }) => (
           <TransitionGroup>

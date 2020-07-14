@@ -1,10 +1,8 @@
 import React from "react";
 import AboutImage from "./aboutImage.jpeg";
 import AboutAvatar from "./aboutAvatar.jpg";
-import EyeIcon from "../icons/eye.svg";
-import EveOverIcon from "../icons/linesOverEye.svg";
 import PersonIcon from "../icons/person.svg";
-import { Link } from "react-router-dom";
+import NavButton from "../navbar/NavButton";
 
 export default function About() {
   return (
@@ -37,13 +35,7 @@ export default function About() {
           W wolnym czasie uczę się grać na pianinie, jeżdżę rowerem, przechadzam
           się po mieście, oglądam seriale i gram w gry.
         </p>
-        <Link to="/skills">
-          <button className="aboutPageBtn">
-            <p>Umiejętności</p>
-            <img className="eyeLines" src={EveOverIcon} alt="" />
-            <img className="eyeIcon" src={EyeIcon} alt="" />
-          </button>
-        </Link>
+        <NavButton link="/skills" txt="Umiejętności" cname="aboutPageBtn" />
       </div>
       <div className="aboutImage">
         <img src={AboutImage} alt="" />

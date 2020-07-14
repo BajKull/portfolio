@@ -5,6 +5,7 @@ import ContactIcon from "../icons/contact.svg";
 import ProjectsIcon from "../icons/work.svg";
 import SkillsIcon from "../icons/skills.svg";
 import AboutIcon from "../icons/about.svg";
+import Background from "../icons/bg3.svg";
 import { Link } from "react-router-dom";
 
 export default function Navbar({ path }) {
@@ -21,13 +22,6 @@ export default function Navbar({ path }) {
 
   return (
     <div className="navMenu">
-      {/* <button
-        onClick={() => setSideBar(!sideBar)}
-        className="navMenuBtn menuBtn"
-      >
-        <img src={MenuIcon} alt="" />
-      </button>
-      {sideBar && <SideBar />} */}
       <Link to="/">
         <button className="navMenuBtn">
           <img src={HomeIcon} alt="" />
@@ -53,6 +47,9 @@ export default function Navbar({ path }) {
           <img src={ContactIcon} alt="" />
         </button>
       </Link>
+      <div className="navbarBg">
+        <img src={Background} alt="" />
+      </div>
     </div>
   );
 }

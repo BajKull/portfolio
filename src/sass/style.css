@@ -269,15 +269,24 @@
 }
 
 .navbarBg {
-  width: 1920px;
   position: absolute;
-  top: -300px;
-  z-index: 5;
+  top: -30px;
+  z-index: -1;
+  margin-left: 75px;
+}
+
+@media (max-width: 600px) {
+  .navbarBg {
+    top: -50px;
+    margin-left: 150px;
+  }
 }
 
 .navActive {
   -webkit-box-shadow: 0 8px 0 -5px #8b13d6;
           box-shadow: 0 8px 0 -5px #8b13d6;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .navMenuBtn {
@@ -286,6 +295,12 @@
   border: 0;
   background: 0;
   border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .navMenuBtn {
+    padding: 10px 15px;
+  }
 }
 
 .navMenuBtn:focus {
@@ -301,15 +316,9 @@
   width: 32px;
 }
 
-.homeBtn {
-  top: 15px;
-  right: 95px;
-}
-
 @media (max-width: 600px) {
-  .homeBtn {
-    right: none;
-    left: 15px;
+  .navMenuBtn img {
+    width: 24px;
   }
 }
 
@@ -473,8 +482,27 @@
   .projects .projectsTitle {
     font-size: 2.75rem;
     margin: 75px 0 25px 0;
-    padding-bottom: 25px;
+    padding: 25px 0px;
     border-bottom: 2px solid #8b13d6;
+  }
+}
+
+.projects a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  margin: auto;
+}
+
+.projects .skillsBtn {
+  margin: 50px;
+  background: whitesmoke;
+}
+
+@media (max-width: 600px) {
+  .projects .skillsBtn {
+    margin: 25px;
   }
 }
 
@@ -691,35 +719,45 @@
   }
 }
 
+.project .projectHrefs {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .project .projectBtnHref {
   border: 3px solid #8b13d6;
+  background: none;
   color: #8b13d6;
   font-size: 24px;
-  padding: 10px 75px;
+  padding: 10px 25px;
   font-weight: 600;
-  min-width: 120px;
+  width: 200px;
+  text-align: center;
 }
 
 @media (max-width: 1800px) {
   .project .projectBtnHref {
-    padding: 10px 35px;
+    width: 150px;
   }
 }
 
 @media (max-width: 1400px) {
   .project .projectBtnHref {
-    padding: 10px 75px;
+    width: 200px;
   }
 }
 
 @media (max-width: 900px) {
   .project .projectBtnHref {
-    padding: 10px 35px;
+    width: 150px;
   }
 }
 
 @media (max-width: 600px) {
   .project .projectBtnHref {
+    width: 125px;
     padding: 10px 15px;
     margin: 0 15px 15px 15px;
   }
@@ -733,13 +771,7 @@
 
 @media (max-width: 1400px) {
   .project .projectHref1 {
-    left: 25%;
-  }
-}
-
-@media (max-width: 1200px) {
-  .project .projectHref1 {
-    left: 15%;
+    left: 50px;
   }
 }
 
@@ -757,13 +789,7 @@
 
 @media (max-width: 1400px) {
   .project .projectHref2 {
-    right: 25%;
-  }
-}
-
-@media (max-width: 1200px) {
-  .project .projectHref2 {
-    right: 15%;
+    right: 50px;
   }
 }
 
@@ -950,21 +976,9 @@
 .skills {
   width: 100%;
   min-height: 100vh;
+  padding-bottom: 25px;
   background: -webkit-gradient(linear, left top, right top, from(#450f67), to(#8b13d6));
   background: linear-gradient(90deg, #450f67 0%, #8b13d6 100%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .skills a {
@@ -972,6 +986,8 @@
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
+  width: 225px;
+  margin: 50px auto 0 auto;
 }
 
 .skills .bg {
@@ -985,16 +1001,18 @@
 }
 
 .skills h1 {
-  width: 100%;
-  text-align: center;
   color: white;
-  font-size: 3rem;
-  margin: 50px;
+  font-size: 4rem;
+  text-align: center;
+  margin: 0 0 75px 0;
+  padding-top: 125px;
 }
 
 @media (max-width: 600px) {
   .skills h1 {
-    padding: 100px 25px 50px 25px;
+    font-size: 2rem;
+    margin: 0 0 25px 0;
+    padding-top: 100px;
   }
 }
 
@@ -1012,6 +1030,13 @@
           justify-content: center;
   width: 90%;
   margin: 0 5% 0 5%;
+}
+
+@media (max-width: 600px) {
+  .skillsIcons {
+    width: 95%;
+    margin: 0 2.5% 0 2.5%;
+  }
 }
 
 .skillsCard {
@@ -1037,6 +1062,14 @@
           justify-content: center;
 }
 
+@media (max-width: 600px) {
+  .skillsCard {
+    padding: 10px;
+    margin: 10px;
+    min-width: 150px;
+  }
+}
+
 .skillsCard .skillsTopBar {
   position: absolute;
   top: 0;
@@ -1051,12 +1084,17 @@
 
 .skillsIcon {
   position: relative;
-  width: 118px;
-  height: 118px;
+  margin: auto;
   border-radius: 50%;
   padding: 25px;
   background-color: white;
   color: #8b13d6;
+}
+
+@media (max-width: 600px) {
+  .skillsIcon {
+    padding: 15px;
+  }
 }
 
 .skillsIcon img {
@@ -1064,8 +1102,15 @@
   height: 64px;
 }
 
+@media (max-width: 600px) {
+  .skillsIcon img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
 .skillsBtn {
-  margin-bottom: 25px;
+  margin: 0;
 }
 
 .skillsBtn .eyeLines {
@@ -1089,14 +1134,14 @@
 
 .contact h1 {
   text-align: center;
-  margin-top: 100px;
-  padding: 25px;
+  margin: 125px 0 75px 0;
+  font-size: 4rem;
 }
 
 @media (max-width: 600px) {
   .contact h1 {
     font-size: 2rem;
-    margin-top: 50px;
+    margin: 100px 0 25px 0;
   }
 }
 

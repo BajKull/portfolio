@@ -1,6 +1,5 @@
 .projects {
   @include flexColumn;
-  // @include animationSlideLeft(1s, 0s);
 
   .projectsTitle {
     font-size: 4rem;
@@ -10,8 +9,22 @@
     @include breakpoint(600px) {
       font-size: 2.75rem;
       margin: 75px 0 25px 0;
-      padding-bottom: 25px;
+      padding: 25px 0px;
       border-bottom: 2px solid $primaryColor;
+    }
+  }
+
+  a {
+    display: flex;
+    text-decoration: none;
+    margin: auto;
+  }
+
+  .skillsBtn {
+    margin: 50px;
+    background: rgb(245, 245, 245);
+    @include breakpoint(600px) {
+      margin: 25px;
     }
   }
 
@@ -122,6 +135,7 @@
     position: relative;
     width: 30%;
     background-color: rgb(240, 240, 240);
+    // background-color: white;
     @include breakpoint(1400px) {
       width: 90%;
       margin: 0;
@@ -154,24 +168,32 @@
     }
   }
 
+  .projectHrefs {
+    width: 100%;
+    display: flex;
+  }
+
   .projectBtnHref {
     border: 3px solid $primaryColor;
+    background: none;
     color: $primaryColor;
     font-size: 24px;
-    padding: 10px 75px;
+    padding: 10px 25px;
     font-weight: 600;
-    min-width: 120px;
+    width: 200px;
+    text-align: center;
 
     @include breakpoint(1800px) {
-      padding: 10px 35px;
+      width: 150px;
     }
     @include breakpoint(1400px) {
-      padding: 10px 75px;
+      width: 200px;
     }
     @include breakpoint(900px) {
-      padding: 10px 35px;
+      width: 150px;
     }
     @include breakpoint(600px) {
+      width: 125px;
       padding: 10px 15px;
       margin: 0 15px 15px 15px;
     }
@@ -182,10 +204,10 @@
     bottom: 15px;
     left: 25px;
     @include breakpoint(1400px) {
-      left: 25%;
+      left: 50px;
     }
     @include breakpoint(1200px) {
-      left: 15%;
+      // left: 15%;
     }
     @include breakpoint(600px) {
       position: initial;
@@ -197,10 +219,10 @@
     bottom: 15px;
     right: 25px;
     @include breakpoint(1400px) {
-      right: 25%;
+      right: 50px;
     }
     @include breakpoint(1200px) {
-      right: 15%;
+      // right: 15%;
     }
     @include breakpoint(600px) {
       position: initial;

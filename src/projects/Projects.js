@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Project from "./Project";
 import data from "./data/ProjectData";
+import NavButton from "../navbar/NavButton";
 
 export default function Projects() {
   const [currentProject, setCurrectProject] = useState(data.length * 300);
@@ -63,6 +64,9 @@ export default function Projects() {
         setImageTimeout={setImageTimeout}
         arrowClick={arrowClick}
       />
+      <div className="projectsButtonPlace">
+        <NavButton link="/contact" txt="Kontakt" cname="skillsBtn" />
+      </div>
     </div>
   );
 }

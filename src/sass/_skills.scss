@@ -1,16 +1,19 @@
 .skills {
   width: 100%;
   min-height: 100vh;
+  padding-bottom: 25px;
   background: linear-gradient(
     90deg,
     rgba(69, 15, 103, 1) 0%,
     rgba(139, 19, 214, 1) 100%
   );
-  @include flexColumn;
+  // @include flexColumn;
 
   a {
     display: flex;
     text-decoration: none;
+    width: 225px;
+    margin: 50px auto 0 auto;
   }
 
   .bg {
@@ -27,14 +30,16 @@
   }
 
   h1 {
-    width: 100%;
-    text-align: center;
     color: $primaryColorText;
-    font-size: 3rem;
-    margin: 50px;
+    font-size: 4rem;
+    text-align: center;
+    margin: 0 0 75px 0;
+    padding-top: 125px;
 
     @include breakpoint(600px) {
-      padding: 100px 25px 50px 25px;
+      font-size: 2rem;
+      margin: 0 0 25px 0;
+      padding-top: 100px;
     }
   }
 }
@@ -46,6 +51,11 @@
   justify-content: center;
   width: 90%;
   margin: 0 5% 0 5%;
+
+  @include breakpoint(600px) {
+    width: 95%;
+    margin: 0 2.5% 0 2.5%;
+  }
 }
 
 .skillsCard {
@@ -57,6 +67,12 @@
   background-color: white;
   color: $secondaryColorText;
   @include flexColumn;
+
+  @include breakpoint(600px) {
+    padding: 10px;
+    margin: 10px;
+    min-width: 150px;
+  }
 
   .skillsTopBar {
     position: absolute;
@@ -74,21 +90,28 @@
 
 .skillsIcon {
   position: relative;
-  width: 118px;
-  height: 118px;
+  margin: auto;
   border-radius: 50%;
   padding: 25px;
   background-color: white;
   color: $primaryColor;
 
+  @include breakpoint(600px) {
+    padding: 15px;
+  }
+
   img {
     width: 64px;
     height: 64px;
+    @include breakpoint(600px) {
+      width: 48px;
+      height: 48px;
+    }
   }
 }
 
 .skillsBtn {
-  margin-bottom: 25px;
+  margin: 0;
   .eyeLines {
     right: 3px;
   }

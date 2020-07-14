@@ -54,14 +54,18 @@ export default function Project({
         </button>
         <button
           className="projectArrow arrowRight"
-          onClick={() => arrowClick(-1)}
+          onClick={() => arrowClick(1)}
         >
           <img src={ArrowRight} alt=">" />
         </button>
         <p className="projectDescription">{data.description}</p>
         <div className="projectHrefs">
-          <button className="projectBtnHref projectHref1">Demo</button>
-          <button className="projectBtnHref projectHref2">GitHub</button>
+          <a href={data.live} target="_blank" rel="noopener noreferrer">
+            <button className="projectBtnHref projectHref1">Demo</button>
+          </a>
+          <a href={data.github} target="_blank" rel="noopener noreferrer">
+            <button className="projectBtnHref projectHref2">GitHub</button>
+          </a>
         </div>
       </div>
     </div>

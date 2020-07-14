@@ -7,14 +7,19 @@
 }
 
 .navbarBg {
-  width: 1920px;
   position: absolute;
-  top: -300px;
-  z-index: 5;
+  top: -30px;
+  z-index: -1;
+  margin-left: 75px;
+  @include breakpoint(600px) {
+    top: -50px;
+    margin-left: 150px;
+  }
 }
 
 .navActive {
   box-shadow: 0 8px 0 -5px $primaryColor;
+  transition: 0.5s;
 }
 
 .navMenuBtn {
@@ -23,6 +28,10 @@
   border: 0;
   background: 0;
   border-radius: 5px;
+
+  @include breakpoint(600px) {
+    padding: 10px 15px;
+  }
 
   &:focus {
     outline: none;
@@ -35,15 +44,8 @@
 
   img {
     width: 32px;
-  }
-}
-
-.homeBtn {
-  top: 15px;
-  right: 95px;
-
-  @include breakpoint(600px) {
-    right: none;
-    left: 15px;
+    @include breakpoint(600px) {
+      width: 24px;
+    }
   }
 }
