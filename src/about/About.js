@@ -35,7 +35,9 @@ export default function About() {
           W wolnym czasie uczę się grać na pianinie, jeżdżę rowerem, przechadzam
           się po mieście, oglądam seriale i gram w gry.
         </p>
-        <NavButton link="/skills" txt="Umiejętności" cname="aboutPageBtn" />
+        <div className="aboutBtnPlace">
+          <NavButton link="/skills" txt="Umiejętności" cname="aboutPageBtn" />
+        </div>
       </div>
       <div className="aboutImage">
         <img src={AboutImage} alt="" />

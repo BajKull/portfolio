@@ -16,8 +16,12 @@ export default function Navbar({ path }) {
     const currentPath = paths.find(
       (el) => el.href.replace(/.*\/\/[^/]*/, "") === path.pathname
     );
-    paths.forEach((el) => el.classList.remove("navActive"));
+    paths.forEach((el) => {
+      el.classList.remove("navActive");
+      el.style.pointerEvents = "";
+    });
     currentPath.classList.add("navActive");
+    currentPath.style.pointerEvents = "none";
   });
 
   return (

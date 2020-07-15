@@ -200,12 +200,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 225px;
+  margin: auto;
   border: 0;
   padding: 0;
   background-color: white;
   border-radius: 5px;
-  margin-top: 35px;
   font-size: 24px;
   font-weight: 500;
 }
@@ -227,6 +226,11 @@
   padding: 10px 40px;
 }
 
+.navigationButton .navButtonEye {
+  position: relative;
+  height: 56px;
+}
+
 .navigationButton .eyeIcon {
   height: 100%;
   background: #e6e6e6;
@@ -239,7 +243,7 @@
   opacity: 0;
   width: 48px;
   top: 4px;
-  right: 0;
+  right: 4px;
   z-index: 1;
   -webkit-transition: 0.25s;
   transition: 0.25s;
@@ -366,9 +370,7 @@
 }
 
 .mainPage a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-top: 35px;
   text-decoration: none;
 }
 
@@ -474,7 +476,7 @@
 
 .projects .projectsTitle {
   font-size: 4rem;
-  margin: 100px 0 75px 0;
+  margin: 125px 0 75px 0;
   text-align: center;
 }
 
@@ -488,21 +490,18 @@
 }
 
 .projects a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-decoration: none;
   margin: auto;
+  text-decoration: none;
 }
 
 .projects .skillsBtn {
-  margin: 50px;
+  margin: 50px auto 50px auto;
   background: whitesmoke;
 }
 
 @media (max-width: 600px) {
   .projects .skillsBtn {
-    margin: 25px;
+    margin: 25px auto 25px auto;
   }
 }
 
@@ -823,7 +822,7 @@
 
 @media (max-width: 825px) {
   .aboutPage .aboutDescription {
-    padding: 25px;
+    padding: 20px;
   }
 }
 
@@ -881,66 +880,15 @@
 }
 
 .aboutPage a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   text-decoration: none;
-  width: 259px;
-  margin: 50px auto 0 auto;
+  margin: auto;
 }
 
-@media (max-width: 600px) {
-  .aboutPage a {
-    width: 204px;
-  }
-}
-
-.aboutPage .aboutPageBtn {
-  position: relative;
+.aboutPage .aboutBtnPlace {
+  margin-top: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 259px;
-  border: 0;
-  padding: 0;
-  background-color: white;
-  border-radius: 5px;
-  font-size: 24px;
-  font-weight: 500;
-}
-
-@media (max-width: 600px) {
-  .aboutPage .aboutPageBtn {
-    font-size: 1em;
-    width: 204px;
-  }
-}
-
-.aboutPage .aboutPageBtn:hover .eyeLines {
-  opacity: 1;
-}
-
-.aboutPage .aboutPageBtn p {
-  margin: 0;
-  padding: 10px 30px;
-}
-
-.aboutPage .aboutPageBtn .eyeIcon {
-  height: 100%;
-  background: #e6e6e6;
-  border-radius: 0 5px 5px 0;
-  padding: 10px;
-}
-
-.aboutPage .aboutPageBtn .eyeLines {
-  position: absolute;
-  width: 48px;
-  top: 4px;
-  right: 0;
-  z-index: 1;
-  opacity: 0;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
 }
 
 @media (max-width: 1600px) {

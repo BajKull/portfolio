@@ -3,7 +3,7 @@
 
   .projectsTitle {
     font-size: 4rem;
-    margin: 100px 0 75px 0;
+    margin: 125px 0 75px 0;
     text-align: center;
 
     @include breakpoint(600px) {
@@ -15,16 +15,15 @@
   }
 
   a {
-    display: flex;
-    text-decoration: none;
     margin: auto;
+    text-decoration: none;
   }
 
   .skillsBtn {
-    margin: 50px;
+    margin: 50px auto 50px auto;
     background: rgb(245, 245, 245);
     @include breakpoint(600px) {
-      margin: 25px;
+      margin: 25px auto 25px auto;
     }
   }
 

@@ -8,8 +8,10 @@ export default function NavButton({ link, txt, cname }) {
     <Link to={link}>
       <button className={cname + " navigationButton"}>
         <p>{txt}</p>
-        <img className="eyeLines" src={EveOverIcon} alt="" />
-        <img className="eyeIcon" src={EyeIcon} alt="" />
+        <div className="navButtonEye">
+          <img className="eyeLines" src={EveOverIcon} alt="" />
+          <img className="eyeIcon" src={EyeIcon} alt="" />
+        </div>
       </button>
     </Link>
   );
