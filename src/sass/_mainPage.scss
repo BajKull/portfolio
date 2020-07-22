@@ -54,6 +54,11 @@
     @include breakpoint(500px) {
       margin-top: -50px;
     }
+
+    @include breakpointH(600px) {
+      padding-top: 50px;
+      font-size: 15vmin;
+    }
   }
 
   .mainDesc {
@@ -62,6 +67,15 @@
     bottom: 25px;
     right: 10%;
     padding-left: 25px;
+
+    @include breakpoint(300px) {
+      width: 225px;
+      font-size: 18px;
+    }
+
+    @include breakpointH(600px) {
+      font-size: 18px;
+    }
   }
 
   .leftLineDesc {

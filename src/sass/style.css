@@ -209,6 +209,12 @@
   font-weight: 500;
 }
 
+@media (max-width: 600px) {
+  .navigationButton {
+    font-size: 18px;
+  }
+}
+
 .navigationButton:focus {
   outline: none;
 }
@@ -229,6 +235,12 @@
 .navigationButton .navButtonEye {
   position: relative;
   height: 56px;
+}
+
+@media (max-width: 600px) {
+  .navigationButton .navButtonEye {
+    height: 47px;
+  }
 }
 
 .navigationButton .eyeIcon {
@@ -286,6 +298,13 @@
   }
 }
 
+@media (max-height: 600px) {
+  .navbarBg {
+    top: -50px;
+    margin-left: 150px;
+  }
+}
+
 .navActive {
   -webkit-box-shadow: 0 8px 0 -5px #8b13d6;
           box-shadow: 0 8px 0 -5px #8b13d6;
@@ -307,6 +326,18 @@
   }
 }
 
+@media (max-width: 300px) {
+  .navMenuBtn {
+    padding: 10px 10px;
+  }
+}
+
+@media (max-height: 600px) {
+  .navMenuBtn {
+    padding: 10px 15px;
+  }
+}
+
 .navMenuBtn:focus {
   outline: none;
   background: #414141;
@@ -321,6 +352,18 @@
 }
 
 @media (max-width: 600px) {
+  .navMenuBtn img {
+    width: 24px;
+  }
+}
+
+@media (max-width: 300px) {
+  .navMenuBtn img {
+    width: 18px;
+  }
+}
+
+@media (max-height: 600px) {
   .navMenuBtn img {
     width: 24px;
   }
@@ -434,12 +477,32 @@
   }
 }
 
+@media (max-height: 600px) {
+  .mainPage h1 {
+    padding-top: 50px;
+    font-size: 15vmin;
+  }
+}
+
 .mainPage .mainDesc {
   width: 275px;
   position: absolute;
   bottom: 25px;
   right: 10%;
   padding-left: 25px;
+}
+
+@media (max-width: 300px) {
+  .mainPage .mainDesc {
+    width: 225px;
+    font-size: 18px;
+  }
+}
+
+@media (max-height: 600px) {
+  .mainPage .mainDesc {
+    font-size: 18px;
+  }
 }
 
 .mainPage .leftLineDesc {
@@ -486,6 +549,12 @@
     margin: 75px 0 25px 0;
     padding: 25px 0px;
     border-bottom: 2px solid #8b13d6;
+  }
+}
+
+@media (max-width: 350px) {
+  .projects .projectsTitle {
+    font-size: 2.5rem;
   }
 }
 
@@ -702,6 +771,13 @@
   }
 }
 
+@media (max-width: 350px) {
+  .project .projectTitle {
+    margin-top: 25px;
+    font-size: 2.25rem;
+  }
+}
+
 .project .projectDescription {
   padding: 25px;
 }
@@ -762,6 +838,13 @@
   }
 }
 
+@media (max-width: 300px) {
+  .project .projectBtnHref {
+    font-size: 16px;
+    width: 100px;
+  }
+}
+
 .project .projectHref1 {
   position: absolute;
   bottom: 15px;
@@ -810,6 +893,13 @@
   .aboutPage {
     width: 90%;
     margin: 125px 5% 25px 5%;
+  }
+}
+
+@media (max-width: 400px) {
+  .aboutPage {
+    width: 100%;
+    margin: 125px 0 25px 0;
   }
 }
 
@@ -934,8 +1024,13 @@
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
-  width: 225px;
   margin: 50px auto 0 auto;
+}
+
+.skills .skillsNavContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .skills .bg {

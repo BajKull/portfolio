@@ -12,7 +12,7 @@ import imagespyfall3 from "../screenshots/spyfall3.jpg";
 const BnnBotData = {
   title: "Bnn Bot",
   description:
-    "Strona umożliwiająca dodanie bota na serwer do aplikacji discord, który wykorzystuje różne API i cechuje się bogatą funkcjonalnością.",
+    "Strona umożliwiająca dodanie mojego bota na serwer do aplikacji Discord, który wykorzystuje różne API i cechuje się bogatą funkcjonalnością.",
   images: [imagebot1, imagebot2],
   github: "https://github.com/BajKull/BnnBotSite",
   live: "https://bnnbot.netlify.app/",
@@ -20,7 +20,7 @@ const BnnBotData = {
 
 const PortfolioData = {
   title: "Portfolio",
-  description: "Strona reprezentująca moje projekty oraz umiejętności.",
+  description: "Strona reprezentująca mnie, moje projekty oraz umiejętności.",
   images: [imageportfolio1, imageportfolio2, imageportfolio3],
   github: "https://github.com/BajKull/portfolio",
   live: "https://dbanachowski.netlify.app/",

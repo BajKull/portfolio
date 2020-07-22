@@ -8,6 +8,11 @@
     margin: 125px 5% 25px 5%;
   }
 
+  @include breakpoint(400px) {
+    width: 100%;
+    margin: 125px 0 25px 0;
+  }
+
   .aboutDescription {
     position: relative;
     width: 60%;

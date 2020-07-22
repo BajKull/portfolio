@@ -19,7 +19,9 @@ export default function Skills() {
           </div>
         ))}
       </div>
-      <NavButton link="/contact" txt="Kontakt" cname="skillsBtn" />
+      <div className="skillsNavContainer">
+        <NavButton link="/contact" txt="Kontakt" cname="skillsBtn" />
+      </div>
     </div>
   );
 }

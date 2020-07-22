@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin breakpointH($height) {
+  @media (max-height: $height) {
+    @content;
+  }
+}

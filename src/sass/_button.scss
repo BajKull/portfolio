@@ -10,6 +10,10 @@
   font-size: 24px;
   font-weight: 500;
 
+  @include breakpoint(600px) {
+    font-size: 18px;
+  }
+
   &:focus {
     outline: none;
     .eyeLines {
@@ -31,6 +35,10 @@
   .navButtonEye {
     position: relative;
     height: 56px;
+
+    @include breakpoint(600px) {
+      height: 47px;
+    }
   }
 
   .eyeIcon {

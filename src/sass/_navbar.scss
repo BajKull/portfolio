@@ -15,6 +15,11 @@
     top: -50px;
     margin-left: 150px;
   }
+
+  @include breakpointH(600px) {
+    top: -50px;
+    margin-left: 150px;
+  }
 }
 
 .navActive {
@@ -32,6 +37,12 @@
   @include breakpoint(600px) {
     padding: 10px 15px;
   }
+  @include breakpoint(300px) {
+    padding: 10px 10px;
+  }
+  @include breakpointH(600px) {
+    padding: 10px 15px;
+  }
 
   &:focus {
     outline: none;
@@ -45,6 +56,12 @@
   img {
     width: 32px;
     @include breakpoint(600px) {
+      width: 24px;
+    }
+    @include breakpoint(300px) {
+      width: 18px;
+    }
+    @include breakpointH(600px) {
       width: 24px;
     }
   }
