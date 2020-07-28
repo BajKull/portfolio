@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Project from "./Project";
 import data from "./data/ProjectData";
 import NavButton from "../navbar/NavButton";
+import { Helmet } from "react-helmet";
 
 export default function Projects() {
   const [currentProject, setCurrectProject] = useState(data.length * 300);
@@ -67,6 +68,13 @@ export default function Projects() {
       <div className="projectsButtonPlace">
         <NavButton link="/contact" txt="Kontakt" cname="skillsBtn" />
       </div>
+      <Helmet>
+        <title>Projekty - Dawid Banachowski</title>
+        <meta
+          name="description"
+          content="Spyfall - Gra planszowa/karciana Spyfall przeniesiona na przeglądarkę. Zgarnij przyjaciół i zagraj z nimi, nakryj szpiega lub jeśli nim jesteś, odgadnij lokację graczy. Przewiduje opcję uruchomienia na jednym urządzeniu przez wielu graczy, bądź poprzez online lobby..."
+        />
+      </Helmet>
     </div>
   );
 }

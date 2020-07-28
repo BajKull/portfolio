@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 import NavButton from "../navbar/NavButton";
 
@@ -21,6 +22,14 @@ export default function Main() {
         <div className="leftLineDesc"></div>
         Witam, nazywam się Dawid, a to moje portfolio!
       </h4>
+
+      <Helmet>
+        <title>Dawid Banachowski</title>
+        <meta
+          name="description"
+          content="Dawid Banachowski - strona portfolio"
+        />
+      </Helmet>
     </div>
   );
 }

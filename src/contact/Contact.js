@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import Firebase from "firebase";
+import Firebase from "firebase/app";
+import "firebase/database";
 import { Spinner } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 
 import MailIcon from "./icons/mail.svg";
 import NameIcon from "./icons/name.svg";
@@ -107,6 +109,10 @@ export default function Contact() {
           </div>
         </form>
       </div>
+      <Helmet>
+        <title>Kontakt - Dawid Banachowski</title>
+        <meta name="description" content="Skontaktuj się ze mną!" />
+      </Helmet>
     </div>
   );
 }

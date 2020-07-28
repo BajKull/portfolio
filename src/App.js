@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import Firebase from "firebase";
+import Firebase from "firebase/app";
 import Main from "./main/Main";
 import Projects from "./projects/Projects";
 import About from "./about/About";

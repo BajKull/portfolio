@@ -3,6 +3,7 @@ import AboutImage from "./aboutImage.jpeg";
 import AboutAvatar from "./aboutAvatar.jpg";
 import PersonIcon from "../icons/person.svg";
 import NavButton from "../navbar/NavButton";
+import { Helmet } from "react-helmet";
 
 export default function About() {
   return (
@@ -42,6 +43,13 @@ export default function About() {
       <div className="aboutImage">
         <img src={AboutImage} alt="" />
       </div>
+      <Helmet>
+        <title>O mnie - Dawid Banachowski</title>
+        <meta
+          name="description"
+          content="Mam 22 lata i jestem studentem trzeciego roku informatyki w Uniwersytecie Gdańskim..."
+        />
+      </Helmet>
     </div>
   );
 }
