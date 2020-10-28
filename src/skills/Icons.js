@@ -13,68 +13,27 @@ import Rwd from "./icons/rwd.svg";
 import Sass from "./icons/sass.svg";
 import Socket from "./icons/socketio.svg";
 import Firebase from "./icons/firebase.svg";
+import Redux from "./icons/redux.svg";
+import AdobeXD from "./icons/adobexd.svg";
 
 const icons = [
-  {
-    name: "HTML5",
-    icon: Html,
-  },
-  {
-    name: "CSS3",
-    icon: Css,
-  },
-  {
-    name: "Sass",
-    icon: Sass,
-  },
-  {
-    name: "RWD",
-    icon: Rwd,
-  },
-  {
-    name: "JavaScript",
-    icon: Js,
-  },
-  {
-    name: "ES6",
-    icon: Es6,
-  },
-  {
-    name: "NodeJS",
-    icon: Nodejs,
-  },
-  {
-    name: "NPM",
-    icon: Npm,
-  },
-  {
-    name: "Rest API",
-    icon: Rest,
-  },
-  {
-    name: "Git",
-    icon: Github,
-  },
-  {
-    name: "React",
-    icon: React,
-  },
-  {
-    name: "Express",
-    icon: Express,
-  },
-  {
-    name: "Socket.io",
-    icon: Socket,
-  },
-  {
-    name: "MySQL",
-    icon: Mysql,
-  },
-  {
-    name: "Firebase",
-    icon: Firebase,
-  },
+  { name: "HTML5", icon: Html },
+  { name: "CSS3", icon: Css },
+  { name: "Sass", icon: Sass },
+  { name: "RWD", icon: Rwd },
+  { name: "JavaScript", icon: Js },
+  { name: "ES6", icon: Es6 },
+  { name: "NodeJS", icon: Nodejs },
+  { name: "NPM", icon: Npm },
+  { name: "Rest API", icon: Rest },
+  { name: "Git", icon: Github },
+  { name: "React", icon: React },
+  { name: "Express", icon: Express },
+  { name: "Socket.io", icon: Socket },
+  { name: "MySQL", icon: Mysql },
+  { name: "Firebase", icon: Firebase },
+  { name: "Redux", icon: Redux },
+  { name: "Adobe XD", icon: AdobeXD },
 ];
 
 export default icons;

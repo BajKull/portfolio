@@ -69,12 +69,18 @@
   border-radius: 5px;
   background-color: white;
   color: $secondaryColorText;
+  transition: 0.2s;
   @include flexColumn;
 
   @include breakpoint(600px) {
     padding: 10px;
     margin: 10px;
     min-width: 150px;
+  }
+
+  &:hover {
+    transform: translateY(-15px);
+    box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, 0.75);
   }
 
   .skillsTopBar {

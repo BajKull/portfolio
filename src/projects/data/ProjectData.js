@@ -9,6 +9,11 @@ import imagespyfall1 from "../screenshots/spyfall1.jpg";
 import imagespyfall2 from "../screenshots/spyfall2.jpg";
 import imagespyfall3 from "../screenshots/spyfall3.jpg";
 
+import imageCardM1 from "../screenshots/cardmaker1.png";
+import imageCardM2 from "../screenshots/cardmaker2.png";
+import imageCardM3 from "../screenshots/cardmaker3.png";
+import imageCardM4 from "../screenshots/cardmaker4.png";
+
 const BnnBotData = {
   title: "Bnn Bot",
   description:
@@ -35,6 +40,15 @@ const SpyfallData = {
   live: "http://spyfallthegame.netlify.com/",
 };
 
-const data = [SpyfallData, BnnBotData, PortfolioData];
+const BnnCardMaker = {
+  title: "Card Maker",
+  description:
+    "Serwis umożliwiający tworzenie kart online we wbudowanym edytorze, publikowanie ich poprzez wygenerowany link URL lub pobranie na urządzenie jako obraz. Karty można tworzyć od zera lub edytować dostępne szablony. Szablony mogą być stworzone przez każdego użytkownika, jednak nie są od razu dostępne do publicznego podglądu w wyszukiwarce ze względu na treści, które użytkownik może dodać, jednak dalej można do nich uzyskać dostęp za pośrednictwem linku. Aplikacja pozwala na tworzenie konta i edytowanie profilu użytkownika.",
+  images: [imageCardM1, imageCardM2, imageCardM3, imageCardM4],
+  github: "https://github.com/BajKull/cardmaker",
+  live: "https://bnncardmaker.netlify.app/",
+};
+
+const data = [BnnCardMaker, SpyfallData, BnnBotData, PortfolioData];
 
 export default data;

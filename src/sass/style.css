@@ -666,8 +666,6 @@
 .project .projectImages {
   position: relative;
   width: 60%;
-  height: auto;
-  margin-left: 5%;
 }
 
 @media (max-width: 1400px) {
@@ -685,7 +683,19 @@
 
 .project .CrossfadeImage {
   width: 100%;
-  min-height: 26.6vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media (max-width: 1400px) {
+  .project .CrossfadeImage {
+    height: auto;
+  }
 }
 
 .project .projectImagesDots {
@@ -723,7 +733,7 @@
 
 .project .projectInfo {
   position: relative;
-  width: 30%;
+  width: 40%;
   background-color: #f0f0f0;
 }
 
@@ -767,24 +777,28 @@
 
 @media (max-width: 600px) {
   .project .projectTitle {
-    margin-top: 15px;
+    margin-top: 27px;
+    font-size: 2rem;
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 300px) {
   .project .projectTitle {
-    margin-top: 25px;
-    font-size: 2.25rem;
+    margin-top: 33px;
+    font-size: 1.5rem;
   }
 }
 
 .project .projectDescription {
   padding: 25px;
+  max-height: 14vw;
+  overflow-y: auto;
 }
 
 @media (max-width: 1400px) {
   .project .projectDescription {
     margin-bottom: 75px;
+    max-height: none;
   }
 }
 
@@ -1090,6 +1104,8 @@
   border-radius: 5px;
   background-color: white;
   color: #212529;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1111,6 +1127,13 @@
     margin: 10px;
     min-width: 150px;
   }
+}
+
+.skillsCard:hover {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  -webkit-box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, 0.75);
 }
 
 .skillsCard .skillsTopBar {
