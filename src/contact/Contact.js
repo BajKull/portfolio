@@ -3,11 +3,8 @@ import Firebase from "firebase/app";
 import "firebase/database";
 import { Spinner } from "react-bootstrap";
 import { Helmet } from "react-helmet";
-
-import MailIcon from "./icons/mail.svg";
-import NameIcon from "./icons/name.svg";
-import PencilIcon from "./icons/pencil.svg";
 import SendIcon from "./icons/send.svg";
+import bg from "./bg.jpg";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -55,42 +52,40 @@ export default function Contact() {
   return (
     <div className="contact">
       <div className="bg"></div>
+      <img src={bg} alt="" className="bgImg" />
       <h1>Skontaktuj się ze mną!</h1>
       <div className="contactForm">
         <p className="contactMail">bajkull@gmail.com</p>
         <img className="contactBg" src={SendIcon} alt="" />
         <form onSubmit={handleSubmit}>
-          <label>
-            <img src={NameIcon} alt="" />
-            <input
-              placeholder="Twoje imię:"
-              type="text"
-              value={name}
-              required
-              onChange={(e) => setName(e.target.value)}
-            />
-          </label>
-          <label>
-            <img src={MailIcon} alt="" />
-            <input
-              placeholder="Twój_email@gmail.com"
-              type="email"
-              value={mail}
-              required
-              onChange={(e) => setMail(e.target.value)}
-            />
-          </label>
-          <label>
-            <img src={PencilIcon} alt="" />
-            <textarea
-              placeholder="Wiadomość:"
-              className="bigInput"
-              type="text"
-              value={message}
-              required
-              onChange={(e) => setMessage(e.target.value)}
-            />
-          </label>
+          <label htmlFor="name">Imię</label>
+
+          <input
+            id="name"
+            type="text"
+            value={name}
+            required
+            onChange={(e) => setName(e.target.value)}
+          />
+          <label htmlFor="email">Email</label>
+
+          <input
+            id="email"
+            type="email"
+            value={mail}
+            required
+            onChange={(e) => setMail(e.target.value)}
+          />
+          <label htmlFor="message">Wiadomość</label>
+
+          <textarea
+            id="message"
+            className="bigInput"
+            type="text"
+            value={message}
+            required
+            onChange={(e) => setMessage(e.target.value)}
+          />
           <div className="contactBtn">
             <input className="contactSend" type="submit" value="Wyślij" />
             {pending && (

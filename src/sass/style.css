@@ -1185,17 +1185,39 @@
 
 .contact {
   width: 100%;
-  background-color: #f6ebfd;
   padding-bottom: 25px;
+}
+
+@media (max-width: 600px) {
+  .contact {
+    background-color: rgba(246, 235, 253, 0.95);
+  }
 }
 
 .contact .bg {
   position: absolute;
   top: 0;
-  background-color: #f6ebfd;
+  background-color: rgba(246, 235, 253, 0.95);
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   z-index: -2;
+}
+
+.contact .bgImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1920px;
+  z-index: -5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .contact .bgImg {
+    display: none;
+  }
 }
 
 .contact h1 {
@@ -1252,110 +1274,121 @@
 
 .contactForm form {
   width: 100%;
-}
-
-.contactForm form img {
-  width: 32px;
-  margin-top: 7px;
-}
-
-@media (max-width: 600px) {
-  .contactForm form img {
-    display: none;
-  }
-}
-
-.contactForm label {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-bottom: 25px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.contactForm label textarea {
+.contactForm form label {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+  .contactForm form label {
+    width: 100%;
+  }
+}
+
+.contactForm form textarea {
   margin: auto;
   width: 85%;
   padding: 10px;
   border: 1px solid #c8c8c8;
   border-radius: 5px;
   min-height: 150px;
+  background: rgba(0, 0, 0, 0.03);
 }
 
 @media (max-width: 600px) {
-  .contactForm label textarea {
+  .contactForm form textarea {
     width: 100%;
   }
 }
 
-.contactForm label textarea:focus {
+.contactForm form textarea:focus {
   outline: none;
   border: 1px solid transparent;
   -webkit-box-shadow: inset 0 0 0 2px #8b13d6;
           box-shadow: inset 0 0 0 2px #8b13d6;
 }
 
-.contactForm label input {
+.contactForm form input {
   margin: auto;
   width: 85%;
   padding: 10px;
   border: 1px solid #c8c8c8;
   border-radius: 5px;
+  margin-bottom: 15px;
+  background: rgba(0, 0, 0, 0.03);
 }
 
 @media (max-width: 600px) {
-  .contactForm label input {
+  .contactForm form input {
     width: 100%;
   }
 }
 
-.contactForm label input:focus {
+.contactForm form input:focus {
   outline: none;
   border: 1px solid transparent;
   -webkit-box-shadow: inset 0 0 0 2px #8b13d6;
           box-shadow: inset 0 0 0 2px #8b13d6;
 }
 
-.contactForm .contactBtn {
+.contactForm form .contactBtn {
   width: 100%;
   text-align: center;
   padding-bottom: 25px;
   margin-top: 50px;
 }
 
-.contactForm .contactBtn .contactSend {
-  margin-left: 15px;
+.contactForm form .contactBtn .contactSend {
   border: 0;
   border-radius: 5px;
   background-color: #8b13d6;
   color: white;
   padding: 15px 50px;
+  width: 50%;
 }
 
-.contactForm .contactBtn .contactSend:focus {
+@media (max-width: 600px) {
+  .contactForm form .contactBtn .contactSend {
+    width: 75%;
+    padding: 15px 35px;
+  }
+}
+
+.contactForm form .contactBtn .contactSend:focus {
   outline: none;
   -webkit-box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.75);
           box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.75);
 }
 
-.contactForm .contactBtn .contactSent {
+.contactForm form .contactBtn .contactSent {
   padding: 14px;
   margin: auto;
   width: 60%;
 }
 
 @media (max-width: 600px) {
-  .contactForm .contactBtn .contactSent {
+  .contactForm form .contactBtn .contactSent {
     width: 90%;
   }
 }
 
-.contactForm .contactBtn .contactApproved {
+.contactForm form .contactBtn .contactApproved {
   color: #2b7a3d;
   background: #cfeed6;
   border: 1px solid #4bc066;
@@ -1363,7 +1396,7 @@
   border-radius: 5px;
 }
 
-.contactForm .contactBtn .contactError {
+.contactForm form .contactBtn .contactError {
   color: #7a2b2b;
   background: #eecfcf;
   border: 1px solid #c04b4b;
@@ -1371,7 +1404,7 @@
   border-radius: 5px;
 }
 
-.contactForm .contactBtn .contactLoading {
+.contactForm form .contactBtn .contactLoading {
   position: absolute;
   width: 32px;
   right: 50%;
@@ -1379,7 +1412,7 @@
   bottom: 5px;
 }
 
-.contactForm .contactBtn .contactHidden {
+.contactForm form .contactBtn .contactHidden {
   display: none;
 }
 
