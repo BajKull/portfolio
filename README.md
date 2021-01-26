@@ -26,7 +26,7 @@ Cards which represent my aquired skills in which I feel comfortable.
 
 ### `Contact`
 
-Contact form which sends data to **Firebase** upon success or displays error message otherwise.
+Contact form which sends data to **Firebase** upon success, or displays error message otherwise.
 
 ## Technology stack
 
