@@ -45,19 +45,21 @@ export default function Project({
         </div>
       </div>
       <div className="projectInfo">
-        <h1 className="projectTitle">{data.title}</h1>
-        <button
-          className="projectArrow arrowLeft"
-          onClick={() => arrowClick(-1)}
-        >
-          <img src={ArrowLeft} alt="<" />
-        </button>
-        <button
-          className="projectArrow arrowRight"
-          onClick={() => arrowClick(1)}
-        >
-          <img src={ArrowRight} alt=">" />
-        </button>
+        <div className="projectNav">
+          <h1 className="projectTitle">{data.title}</h1>
+          <button
+            className="projectArrow arrowLeft"
+            onClick={() => arrowClick(-1)}
+          >
+            <img src={ArrowLeft} alt="<" />
+          </button>
+          <button
+            className="projectArrow arrowRight"
+            onClick={() => arrowClick(1)}
+          >
+            <img src={ArrowRight} alt=">" />
+          </button>
+        </div>
         <p className="projectDescription">{data.description}</p>
         <div className="projectHrefs">
           <a href={data.live} target="_blank" rel="noopener noreferrer">
