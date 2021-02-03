@@ -13,12 +13,16 @@ import imagespyfall3 from "../screenshots/spyfall3.jpg";
 import imagespyfall4 from "../screenshots/spyfall4.jpg";
 
 import imageCardM1 from "../screenshots/cardmaker1.jpg";
-import imageCardM2 from "../screenshots/cardmaker2.png";
-import imageCardM3 from "../screenshots/cardmaker3.png";
+import imageCardM2 from "../screenshots/cardmaker2.jpg";
+import imageCardM3 from "../screenshots/cardmaker3.jpg";
 
 import imageExs1 from "../screenshots/exsfromtexas1.jpg";
 import imageExs2 from "../screenshots/exsfromtexas2.jpg";
 import imageExs3 from "../screenshots/exsfromtexas3.jpg";
+
+import imagechess1 from "../screenshots/chessblog1.jpg";
+import imagechess2 from "../screenshots/chessblog2.jpg";
+import imagechess3 from "../screenshots/chessblog3.jpg";
 
 const BnnBotData = {
   title: "Bnn Bot",
@@ -64,9 +68,19 @@ const ExsFromTexas = {
   live: "https://exsfromtexas.netlify.app/",
 };
 
+const ChessBlog = {
+  title: "Chess-blog",
+  description:
+    "Statyczna strona zrobiona w Gatsbym. Pobiera dane dotyczące z postów z Firebase, Contentful, lokalnych plików .md",
+  images: [imagechess1, imagechess2, imagechess3],
+  github: "https://github.com/BajKull/chess-blog",
+  live: "https://chess-blog.netlify.app/",
+};
+
 const data = [
   BnnCardMaker,
   ExsFromTexas,
+  ChessBlog,
   SpyfallData,
   BnnBotData,
   PortfolioData,
